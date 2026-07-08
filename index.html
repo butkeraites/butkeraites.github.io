@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renan Butkeraites — Engineering Leader · PhD in Operations Research</title>
+<meta name="description" content="Engineering leader with a PhD in Operations Research. I build optimization, AI, and data systems that ship — and lead the teams behind them. Based in Kennesaw, GA, working remotely worldwide.">
+<meta property="og:title" content="Renan Butkeraites — Engineering Leader · PhD in Operations Research">
+<meta property="og:description" content="I turn optimization research into production systems. Tech leadership, Python backends, AI/LLM, mathematical optimization.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f4c5c'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Georgia'>R</text></svg>">
+<style>
+  :root {
+    --bg: #fcfcfa;
+    --surface: #ffffff;
+    --ink: #1a2028;
+    --ink-soft: #4a5568;
+    --ink-faint: #8a94a3;
+    --accent: #0f4c5c;
+    --accent-soft: #e6eef0;
+    --line: #e5e7e4;
+    --max: 880px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12161c;
+      --surface: #1a2028;
+      --ink: #eceef0;
+      --ink-soft: #b7bfc9;
+      --ink-faint: #7c8694;
+      --accent: #7fc4d4;
+      --accent-soft: #1e3038;
+      --line: #2a323c;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  nav .brand { font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+  nav ul { display: flex; gap: 22px; list-style: none; }
+  nav ul a { color: var(--ink-soft); font-size: 14.5px; font-weight: 500; }
+  nav ul a:hover { color: var(--accent); text-decoration: none; }
+  @media (max-width: 640px) { nav ul { display: none; } }
+
+  /* HERO */
+  header { padding: 88px 0 64px; }
+  .kicker {
+    display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent);
+    background: var(--accent-soft); padding: 4px 12px; border-radius: 999px; margin-bottom: 20px;
+  }
+  h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 800; }
+  .headline { font-size: clamp(19px, 3vw, 24px); color: var(--ink-soft); margin-top: 16px; max-width: 640px; }
+  .headline strong { color: var(--ink); font-weight: 650; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 28px; font-size: 15px; color: var(--ink-faint); }
+  .meta-row span::before { content: "· "; color: var(--accent); font-weight: 700; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .btn {
+    display: inline-block; padding: 11px 22px; border-radius: 8px; font-weight: 600; font-size: 15px;
+    border: 1px solid var(--accent);
+  }
+  .btn.primary { background: var(--accent); color: #fff; }
+  .btn.primary:hover { opacity: 0.9; text-decoration: none; }
+  .btn.ghost { color: var(--accent); }
+  .btn.ghost:hover { background: var(--accent-soft); text-decoration: none; }
+  @media (prefers-color-scheme: dark) { .btn.primary { color: #0e1418; } }
+
+  /* SECTIONS */
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 26px; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .section-sub { color: var(--ink-faint); font-size: 15.5px; margin-bottom: 34px; }
+
+  /* WORK CARDS */
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  @media (max-width: 700px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 24px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .card h3 { font-size: 17.5px; letter-spacing: -0.01em; }
+  .card .org { font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; }
+  .card p { font-size: 15px; color: var(--ink-soft); }
+  .card .stat { font-size: 15px; color: var(--ink); font-weight: 600; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 8px; }
+  .tags span {
+    font-size: 12px; font-weight: 500; color: var(--ink-faint);
+    border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px;
+  }
+
+  /* TIMELINE */
+  .timeline { list-style: none; }
+  .timeline li {
+    display: grid; grid-template-columns: 120px 1fr; gap: 20px;
+    padding: 18px 0; border-bottom: 1px solid var(--line);
+  }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline .when { font-size: 14px; color: var(--ink-faint); font-variant-numeric: tabular-nums; padding-top: 2px; }
+  .timeline .role { font-weight: 650; }
+  .timeline .org2 { color: var(--accent); font-weight: 500; }
+  .timeline .desc { font-size: 15px; color: var(--ink-soft); margin-top: 4px; }
+  @media (max-width: 560px) { .timeline li { grid-template-columns: 1fr; gap: 4px; } }
+
+  /* PUBLICATIONS */
+  .pubs { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+  .pubs li { padding-left: 18px; border-left: 3px solid var(--accent); }
+  .pubs .pub-title { font-weight: 650; }
+  .pubs .pub-venue { font-size: 14.5px; color: var(--ink-faint); }
+
+  /* ABOUT */
+  .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+  @media (max-width: 700px) { .about-grid { grid-template-columns: 1fr; } }
+  .about-grid p { margin-bottom: 16px; color: var(--ink-soft); }
+  .about-grid p strong { color: var(--ink); }
+  .facts { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; height: fit-content; }
+  .facts h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-faint); margin-bottom: 12px; }
+  .facts ul { list-style: none; font-size: 15px; display: flex; flex-direction: column; gap: 9px; color: var(--ink-soft); }
+
+  /* FOOTER */
+  footer { border-top: 1px solid var(--line); padding: 48px 0 64px; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 14px; font-size: 15px; }
+  footer .fine { margin-top: 28px; font-size: 13px; color: var(--ink-faint); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">Renan Butkeraites</span>
+    <ul>
+      <li><a href="#work">Selected Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <span class="kicker">Engineering Leadership · Optimization · AI</span>
+    <h1>I turn optimization research into systems that ship.</h1>
+    <p class="headline">Engineering leader with a <strong>PhD in Operations Research</strong> and 7+ years building Python backends, AI/LLM products, and decision-support systems — from mathematical model to production.</p>
+    <div class="meta-row">
+      <span>IT Manager @ SG Global Group</span>
+      <span>Director of Technology @ Fresh Codes</span>
+      <span>Kennesaw, GA — remote worldwide</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:rbritobut@gmail.com">Get in touch</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/rbritobut" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/butkeraites" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Selected Work</h2>
+    <p class="section-sub">Outcomes, not job descriptions. Every number below is one I owned or led.</p>
+    <div class="cards">
+      <div class="card">
+        <span class="org">Nitryx → Progress Rail · A Caterpillar Company</span>
+        <h3>Vehicle routing engine for Brazil's largest sugar producer</h3>
+        <p>Designed and led a Python optimization engine for fleet routing across 40k+ locations — started at Nitryx, carried through Progress Rail's acquisition, and taken from concept to production-ready in 16 months with a team of 6.</p>
+        <p class="stat">−20% fleet size · $60K/month cloud savings via in-house Distance Matrix APIs</p>
+        <div class="tags"><span>Python</span><span>OR / Routing</span><span>Team of 6</span><span>Google Maps API</span></div>
+      </div>
+      <div class="card">
+        <span class="org">Optibus · Public Transit SaaS</span>
+        <h3>Client-facing exports platform for transit operators on 3 continents</h3>
+        <p>Led a 5-developer team owning report generation and integrations for clients across North America, Latin America, and Western Europe — including real-time transportation map feeds.</p>
+        <p class="stat">−50% new bugs · 2× team development velocity · key contract secured</p>
+        <div class="tags"><span>Python</span><span>AWS</span><span>MongoDB</span><span>Team Lead</span></div>
+      </div>
+      <div class="card">
+        <span class="org">PhD Research · UNIFESP + Polytechnique Montréal</span>
+        <h3>SIROM — a robust optimization method under uncertainty</h3>
+        <p>Created a sampling-based multi-objective iterative method for optimization under uncertainty, plus "Hardness", a new robustness measure. Co-authored with Michel Gendreau.</p>
+        <p class="stat">Outperformed or matched literature methods in 92.5% of Bandwidth Packing cases</p>
+        <div class="tags"><span>Robust Optimization</span><span>Monte Carlo</span><span>Published research</span></div>
+      </div>
+      <div class="card">
+        <span class="org">Banco Safra · Banking</span>
+        <h3>Behavioral models that moved acquisition and engagement</h3>
+        <p>Built a Markov-chain model of app user behavior to retarget communication, and executive-level analyses that pivoted credit policy and marketing. Led fraud-pattern analysis on PIX instant payments.</p>
+        <p class="stat">+15% app activation · +45% high-quality credit card leads</p>
+        <div class="tags"><span>Python</span><span>Markov Chains</span><span>MMM</span><span>Fraud Analytics</span></div>
+      </div>
+      <div class="card">
+        <span class="org">Porto Seguro · Insurance</span>
+        <h3>From 5-day to 5-minute model deployments</h3>
+        <p>Started the company's movement toward API-based models and AWS cloud computing, and shipped a freight-size estimation heuristic used in logistics planning.</p>
+        <p class="stat">Deployment time: 5 days → 5 minutes · 20% logistics optimization</p>
+        <div class="tags"><span>AWS</span><span>Flask APIs</span><span>Heuristics</span><span>ML</span></div>
+      </div>
+      <div class="card">
+        <span class="org">Public Health · COVID-19</span>
+        <h3>Forecast UTI — ICU bed forecasting during the pandemic</h3>
+        <p>Co-built an application forecasting intensive-care bed demand for Brazilian health services during COVID-19, published in a national epidemiology journal. Also open-sourced a classroom-occupancy optimizer for safe school distancing.</p>
+        <p class="stat">Published in Epidemiologia e Serviços de Saúde (2020)</p>
+        <div class="tags"><span>Forecasting</span><span>Social Impact</span><span>Open Source</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="section-sub">Ten years from mechatronics technician to engineering leadership.</p>
+    <ul class="timeline">
+      <li>
+        <span class="when">2026 — now</span>
+        <div>
+          <div class="role">Information Technology Manager · <span class="org2">SG Global Group</span></div>
+          <div class="desc">Leading IT operations and technology strategy for SG LAW LLP (Kennesaw, GA): LLM-powered legal solutions for research, contract review, and document analysis; governance of confidential legal datasets (anonymization, redaction, privacy compliance); cybersecurity across AI systems; firm-wide AI adoption and training.</div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2025 — now</span>
+        <div>
+          <div class="role">Director of Technology · <span class="org2">Fresh Codes</span></div>
+          <div class="desc">End-to-end backend engineering for AI-driven product development: distributed cloud architectures (AWS, Azure), high-throughput data pipelines, LLM-powered ML models. Mentoring a fully remote team of 4+ engineers.</div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2025 — 2026</span>
+        <div>
+          <div class="role">Technical Lead · <span class="org2">Serendipe Institute of Science &amp; Technology</span></div>
+          <div class="desc">Drove the institute's technical strategy and R&D execution; project prospecting, technical hiring, and mentoring of engineers and researchers.</div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2024 — 2026</span>
+        <div>
+          <div class="role">Founder &amp; CEO · <span class="org2">BSI — AI &amp; Optimization Consulting (closed)</span></div>
+          <div class="desc">Founded and led a consulting firm in Campinas, Brazil, crafting bespoke AI strategies and optimization solutions for clients; operations closed in January 2026.</div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2024 — 2025</span>
+        <div>
+          <div class="role">Integration Consultant, Backend Python · <span class="org2">hotglue</span></div>
+          <div class="desc">Designed and implemented custom data-integration solutions on hotglue's embedded ETL platform.</div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2022 — 2024</span>
+        <div>
+          <div class="role">Backend Python Team Lead · <span class="org2">Optibus</span></div>
+          <div class="desc">Led the customer-oriented R&D team for specialized exports; pair-programming culture, knowledge-sharing initiatives ("Optifridays"), technical interviewing during rapid company growth.</div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2021 — 2022</span>
+        <div>
+          <div class="role">Researcher, Optimization · <span class="org2">Nitryx Consulting → Progress Rail (Caterpillar)</span></div>
+          <div class="desc">Started the vehicle-routing optimization engine at Nitryx and carried it into Progress Rail after the acquisition — leading a team of 6 from conception to production-ready in 16 months, with Distance Matrix APIs and six real-time integrations.</div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2020 — 2021</span>
+        <div>
+          <div class="role">Data Science Specialist · <span class="org2">Banco Safra</span></div>
+          <div class="desc">Mixed Media Models, Markov-chain behavior models, PIX fraud-pattern detection, executive-level analytics.</div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2019 — 2020</span>
+        <div>
+          <div class="role">Senior Data Scientist · <span class="org2">Porto Seguro</span></div>
+          <div class="desc">API-based model serving on AWS; optimization heuristics for logistics; ML with XGBoost, scikit-learn, Gurobi/CPLEX.</div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2018 — 2019</span>
+        <div>
+          <div class="role">Mathematical Analyst · <span class="org2">UniSoma</span></div>
+          <div class="desc">Column-generation scheduling with CPLEX for railroad workforce planning; real-time Big Data (Kafka, PySpark) NLP fraud detection.</div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2018</span>
+        <div>
+          <div class="role">Research Intern · <span class="org2">CIRRELT — Polytechnique Montréal</span></div>
+          <div class="desc">Optimization under uncertainty, supervised by Prof. Michel Gendreau.</div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2016 — 2021</span>
+        <div>
+          <div class="role">PhD Candidate, Operations Research · <span class="org2">UNIFESP / ITA (CNPq fellow)</span></div>
+          <div class="desc">Thesis: "Optimization under uncertainty: a new computational method, a new robustness measure, and applications."</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <h2>Publications</h2>
+    <p class="section-sub">Peer-reviewed work at the intersection of optimization and uncertainty.</p>
+    <ul class="pubs">
+      <li>
+        <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417422006947" target="_blank" rel="noopener">A sampling-based multi-objective iterative robust optimization method for the Bandwidth Packing Problem</a></div>
+        <div class="pub-venue">with L. L. Salles Neto &amp; M. Gendreau — Expert Systems with Applications, 2022</div>
+      </li>
+      <li>
+        <div class="pub-title">Forecast UTI: an application for forecasting intensive care unit beds during the COVID-19 pandemic</div>
+        <div class="pub-venue">with Salles Neto, Martins, Chaves, Yanasse et al. — Epidemiologia e Serviços de Saúde, 2020</div>
+      </li>
+      <li>
+        <div class="pub-title">Efficient frontier of credit risk using Monte Carlo simulation</div>
+        <div class="pub-venue">with J. L. Chela &amp; L. L. Salles Neto — International Journal of Business Intelligence and Systems Engineering, 2019</div>
+      </li>
+      <li>
+        <div class="pub-title"><a href="https://repositorio.unifesp.br/handle/11600/63626" target="_blank" rel="noopener">PhD Thesis — Optimization under uncertainty: a new computational method, a new robustness measure, and applications</a></div>
+        <div class="pub-venue">UNIFESP, 2021 · Advisors: L. L. Salles Neto &amp; W. A. Lodwick</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p class="section-sub">The short version of a long path.</p>
+    <div class="about-grid">
+      <div>
+        <p>I started as a <strong>mechatronics technician</strong> maintaining flight simulators, and ended up with a <strong>PhD in Operations Research</strong> — because I kept asking how decisions could be made better under uncertainty. Along the way I did research with Michel Gendreau in Montréal, published the SIROM method, and created "Hardness", a new way to measure how robust a solution really is.</p>
+        <p>Since then I've applied that lens in insurance, banking, rail logistics, public transit, and data platforms: always the same job, <strong>turning a messy real-world decision into a model, and the model into production software</strong>. I've led teams through that whole arc — hiring, mentoring, pair programming, and shipping.</p>
+        <p>Today I manage technology for <strong>SG Global Group</strong> in Kennesaw, Georgia — leading legal AI and LLM initiatives for SG LAW LLP — while directing technology at <strong>Fresh Codes</strong>, an AI-driven product studio, with remote teams and global clients. Off the clock: mathematical puzzles, good food, and music — sometimes all three while putting my daughter to sleep.</p>
+      </div>
+      <div class="facts">
+        <h4>Quick facts</h4>
+        <ul>
+          <li><strong>Location:</strong> Kennesaw, GA (US)</li>
+          <li><strong>Work model:</strong> Remote, global</li>
+          <li><strong>Languages:</strong> English, Portuguese</li>
+          <li><strong>PhD:</strong> Operations Research, UNIFESP/ITA (2021)</li>
+          <li><strong>Core:</strong> Python, SQL, AWS, LLMs, integer &amp; robust optimization</li>
+          <li><strong>Solvers:</strong> Gurobi, CPLEX, heuristics</li>
+          <li><strong>ORCID:</strong> <a href="https://orcid.org/0000-0002-5830-0466" target="_blank" rel="noopener">0000-0002-5830-0466</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p class="section-sub" style="margin-bottom:0">I solve chronic problems — the ones that keep coming back no matter what you throw at them. If you're facing one, reach out: I can help you see it in a different light. And who knows — that's exactly how the best collaborations begin.</p>
+    <div class="links">
+      <a href="mailto:rbritobut@gmail.com">rbritobut@gmail.com</a>
+      <a href="https://www.linkedin.com/in/rbritobut" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/butkeraites" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=Zh48TgYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://x.com/renan_but" target="_blank" rel="noopener">X</a>
+    </div>
+    <p class="fine">© 2026 Renan Brito Cano Butkeraites · Built as a single HTML file, no frameworks — the way an optimizer likes it.</p>
+  </div>
+</footer>
+
+</body>
+</html>

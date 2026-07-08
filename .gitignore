@@ -1,0 +1,6 @@
+# ALLOWLIST: ignora tudo por padrão — só o que tem "!" pode ser commitado.
+# Proteção: Profile.pdf e qualquer arquivo pessoal desta pasta NUNCA vão para o repo público.
+*
+!index.html
+!.nojekyll
+!.gitignore

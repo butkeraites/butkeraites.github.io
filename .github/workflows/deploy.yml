@@ -1,0 +1,85 @@
+name: Deploy butkeraites.com
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# No service-account key exists anywhere. Auth is Workload Identity Federation:
+# GitHub mints a short-lived OIDC token, Google exchanges it for credentials,
+# and the provider only accepts tokens whose repository_owner is butkeraites.
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  GCP_PROJECT: personal-page-504820
+  WIF_PROVIDER: projects/1024241903118/locations/global/workloadIdentityPools/github/providers/butkeraites-repos
+  DEPLOY_SA: gh-deployer@personal-page-504820.iam.gserviceaccount.com
+
+jobs:
+  build:
+    name: Build and verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # These checks are the point of the pipeline, not a formality: they
+      # verify the site's claims about public repositories against those
+      # repositories, so a stale licence or a private link cannot ship.
+      - name: Verify
+        run: node scripts/check.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          retention-days: 7
+
+  deploy:
+    name: Deploy to Firebase Hosting
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://butkeraites.com
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ env.WIF_PROVIDER }}
+          service_account: ${{ env.DEPLOY_SA }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Deploy
+        run: npx --yes firebase-tools@15 deploy --only hosting --project "$GCP_PROJECT" --non-interactive

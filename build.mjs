@@ -11,9 +11,10 @@
  *   profile.json    structured identity, stable and versioned
  *   sitemap.xml     with real lastmod from git
  *
- * Plus JSON-LD embedded per page. Nothing here needs a server: the output is
- * a directory of files. That is the point — the demos run in the visitor's
- * browser, so the site keeps working with the billing account switched off.
+ * Plus JSON-LD embedded per page. The output is a directory of files: the site
+ * itself never needs a server. One demo calls a solver that does, and that page
+ * ships a build-time fixture so it still shows a real result when the service
+ * is asleep or gone.
  */
 
 import { readFile, writeFile, mkdir, rm, readdir, cp, stat } from 'node:fs/promises'
@@ -80,6 +81,38 @@ async function emit(relPath, contents) {
   return { path: relPath, bytes: Buffer.byteLength(contents) }
 }
 
+/** Fetch a demo's default response at build time and cache it.
+ *
+ * Two jobs: first paint needs no round trip, and the page still shows a real
+ * result if the service is down when a visitor arrives. The cache is committed,
+ * so a build with no network reuses the last good response rather than
+ * shipping a demo with nothing in it. */
+async function loadFixture(spec) {
+  if (!spec) return null
+  const cachePath = join(ROOT, 'content/fixtures', `${spec.name}.json`)
+  try {
+    const res = await fetch(spec.url, {
+      method: spec.body ? 'POST' : 'GET',
+      headers: spec.body ? { 'Content-Type': 'application/json' } : undefined,
+      body: spec.body ? JSON.stringify(spec.body) : undefined,
+      signal: AbortSignal.timeout(30000),
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    const data = await res.json()
+    await mkdir(dirname(cachePath), { recursive: true })
+    await writeFile(cachePath, JSON.stringify(data, null, 2))
+    console.log(`  fixture ${spec.name}: fetched live`)
+    return data
+  } catch (err) {
+    if (existsSync(cachePath)) {
+      console.log(`  fixture ${spec.name}: ${err.message}, using cached copy`)
+      return JSON.parse(await readFile(cachePath, 'utf8'))
+    }
+    console.warn(`  fixture ${spec.name}: ${err.message}, and no cache — demo will solve on load`)
+    return null
+  }
+}
+
 /* ------------------------------------------------------------------- load */
 
 async function loadProjects() {
@@ -99,6 +132,7 @@ async function loadProjects() {
 
     projects.push({
       ...data,
+      fixture: await loadFixture(data.fixture),
       slug,
       markdown: body,
       html: marked.parse(body),

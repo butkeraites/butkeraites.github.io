@@ -124,7 +124,7 @@ ${demos.length ? `
 <section id="demos">
   <div class="wrap">
     <h2>Things you can actually run</h2>
-    <p class="section-sub">These execute in your browser. No server, no account, no waiting — the solver ships with the page.</p>
+    <p class="section-sub">Real solvers, real results, computed while you watch. Some run in your browser; the heavier ones run on a container that scales to zero. Either way, nothing here is a recording.</p>
     <div class="cards">
       ${demos.map(demoCard).join('\n      ')}
     </div>
@@ -282,7 +282,7 @@ export function renderProject({ profile, project: p, origin }) {
     p.license && ['Licence', esc(p.license)],
     p.techniques?.length && ['Techniques', p.techniques.map(esc).join(', ')],
     p.stack?.length && ['Stack', p.stack.map(esc).join(', ')],
-    p.status === 'demo' && ['Runs', 'Entirely in your browser'],
+    p.status === 'demo' && ['Runs', esc(p.runsOn || 'In your browser')],
   ].filter(Boolean)
 
   const body = `
@@ -313,6 +313,7 @@ export function renderProject({ profile, project: p, origin }) {
       </table>
     </figure>` : ''}
 
+    ${p.fixture ? `<script id="demo-fixture" type="application/json">${JSON.stringify(p.fixture).replace(/</g, '\\u003c')}</script>` : ''}
     ${p.demoModule ? `<figure class="demo-mount" id="demo">
       <figcaption>Interactive — loads on demand, then runs offline.</figcaption>
       <div id="demo-root" data-module="${esc(p.demoModule)}">

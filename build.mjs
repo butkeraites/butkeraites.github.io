@@ -89,6 +89,16 @@ async function emit(relPath, contents) {
  * shipping a demo with nothing in it. */
 async function loadFixture(spec) {
   if (!spec) return null
+
+  // A fixture can be a file we already hold — published results, a committed
+  // dataset — in which case there is nothing to fetch or cache.
+  if (spec.file) {
+    const path = join(ROOT, spec.file)
+    if (!existsSync(path)) throw new Error(`fixture ${spec.name}: ${spec.file} not found`)
+    console.log(`  fixture ${spec.name}: from ${spec.file}`)
+    return JSON.parse(await readFile(path, 'utf8'))
+  }
+
   const cachePath = join(ROOT, 'content/fixtures', `${spec.name}.json`)
   try {
     const res = await fetch(spec.url, {

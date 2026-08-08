@@ -1,0 +1,1613 @@
+{
+ "runs": [
+  {
+   "source": "result_15_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 1020100000.0,
+   "final_objective": 2959.0,
+   "status": "infeasible",
+   "seconds": 1052.9935946464539
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 400000.0,
+   "final_objective": 2974.0,
+   "status": "infeasible",
+   "seconds": 0.17898297309875488
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 900000.0,
+   "final_objective": 3102.0,
+   "status": "infeasible",
+   "seconds": 0.45526981353759766
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 1600000.0,
+   "final_objective": 3073.0,
+   "status": "infeasible",
+   "seconds": 0.8297364711761475
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 2500000.0,
+   "final_objective": 3134.0,
+   "status": "infeasible",
+   "seconds": 1.1829278469085693
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 3600000.0,
+   "final_objective": 3051.0,
+   "status": "infeasible",
+   "seconds": 1.9627182483673096
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 4900000.0,
+   "final_objective": 3110.0,
+   "status": "infeasible",
+   "seconds": 2.1307718753814697
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 6400000.0,
+   "final_objective": 3256.0,
+   "status": "infeasible",
+   "seconds": 2.813854455947876
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 8100000.0,
+   "final_objective": 2749.0,
+   "status": "infeasible",
+   "seconds": 3.495008707046509
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 10000000.0,
+   "final_objective": 3188.0,
+   "status": "infeasible",
+   "seconds": 4.368951797485352
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 12100000.0,
+   "final_objective": 3117.0,
+   "status": "infeasible",
+   "seconds": 5.359590291976929
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 14400000.0,
+   "final_objective": 2869.0,
+   "status": "infeasible",
+   "seconds": 6.277470588684082
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 16900000.0,
+   "final_objective": 2975.0,
+   "status": "infeasible",
+   "seconds": 7.400783061981201
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 19600000.0,
+   "final_objective": 3048.0,
+   "status": "infeasible",
+   "seconds": 8.59540605545044
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 22500000.0,
+   "final_objective": 2859.0,
+   "status": "infeasible",
+   "seconds": 9.864001035690308
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 25600000.0,
+   "final_objective": 3095.0,
+   "status": "infeasible",
+   "seconds": 11.26454496383667
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 28900000.0,
+   "final_objective": 3042.0,
+   "status": "infeasible",
+   "seconds": 12.731913805007935
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 32400000.0,
+   "final_objective": 3169.0,
+   "status": "infeasible",
+   "seconds": 14.231059312820435
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 36100000.0,
+   "final_objective": 3190.0,
+   "status": "infeasible",
+   "seconds": 15.960098028182983
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 40000000.0,
+   "final_objective": 2937.0,
+   "status": "infeasible",
+   "seconds": 17.61299705505371
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 44100000.0,
+   "final_objective": 2968.0,
+   "status": "infeasible",
+   "seconds": 19.345242261886597
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 48400000.0,
+   "final_objective": 2985.0,
+   "status": "infeasible",
+   "seconds": 21.286497116088867
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 52900000.0,
+   "final_objective": 2992.0,
+   "status": "infeasible",
+   "seconds": 23.104633808135986
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 57600000.0,
+   "final_objective": 3257.0,
+   "status": "infeasible",
+   "seconds": 25.331788063049316
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 62500000.0,
+   "final_objective": 3071.0,
+   "status": "infeasible",
+   "seconds": 27.48719573020935
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 67600000.0,
+   "final_objective": 3248.0,
+   "status": "infeasible",
+   "seconds": 29.66395378112793
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 72900000.0,
+   "final_objective": 3253.0,
+   "status": "infeasible",
+   "seconds": 32.15242791175842
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 78400000.0,
+   "final_objective": 3131.0,
+   "status": "infeasible",
+   "seconds": 34.00735354423523
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 84100000.0,
+   "final_objective": 3273.0,
+   "status": "infeasible",
+   "seconds": 36.955965518951416
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 90000000.0,
+   "final_objective": 2630.0,
+   "status": "infeasible",
+   "seconds": 39.482017517089844
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 96100000.0,
+   "final_objective": 3080.0,
+   "status": "infeasible",
+   "seconds": 42.306955337524414
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 102400000.0,
+   "final_objective": 3114.0,
+   "status": "infeasible",
+   "seconds": 44.882761001586914
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 108900000.0,
+   "final_objective": 3187.0,
+   "status": "infeasible",
+   "seconds": 47.757097482681274
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 115600000.0,
+   "final_objective": 3641.0,
+   "status": "infeasible",
+   "seconds": 50.69597554206848
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 122500000.0,
+   "final_objective": 2919.0,
+   "status": "infeasible",
+   "seconds": 53.72584295272827
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 129600000.0,
+   "final_objective": 2619.0,
+   "status": "infeasible",
+   "seconds": 56.70321226119995
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 136900000.0,
+   "final_objective": 3108.0,
+   "status": "infeasible",
+   "seconds": 59.71629238128662
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 144400000.0,
+   "final_objective": 2858.0,
+   "status": "infeasible",
+   "seconds": 63.29864025115967
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 152100000.0,
+   "final_objective": 2932.0,
+   "status": "infeasible",
+   "seconds": 66.92041516304016
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 160000000.0,
+   "final_objective": 3302.0,
+   "status": "infeasible",
+   "seconds": 71.34846019744873
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 168100000.0,
+   "final_objective": 2704.0,
+   "status": "infeasible",
+   "seconds": 74.02962636947632
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 176400000.0,
+   "final_objective": 2884.0,
+   "status": "infeasible",
+   "seconds": 78.15202283859253
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 184900000.0,
+   "final_objective": 3167.0,
+   "status": "infeasible",
+   "seconds": 81.66089797019958
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 193600000.0,
+   "final_objective": 3337.0,
+   "status": "infeasible",
+   "seconds": 84.31530117988586
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 202500000.0,
+   "final_objective": 3064.0,
+   "status": "infeasible",
+   "seconds": 88.81287479400635
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 211600000.0,
+   "final_objective": 3044.0,
+   "status": "infeasible",
+   "seconds": 92.3182361125946
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 220900000.0,
+   "final_objective": 3260.0,
+   "status": "infeasible",
+   "seconds": 96.74408745765686
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 230400000.0,
+   "final_objective": 2929.0,
+   "status": "infeasible",
+   "seconds": 101.0685338973999
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 240100000.0,
+   "final_objective": 2971.0,
+   "status": "infeasible",
+   "seconds": 105.75449919700623
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 250000000.0,
+   "final_objective": 3321.0,
+   "status": "infeasible",
+   "seconds": 110.34623003005981
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 260100000.0,
+   "final_objective": 3176.0,
+   "status": "infeasible",
+   "seconds": 115.04367136955261
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 270400000.0,
+   "final_objective": 3182.0,
+   "status": "infeasible",
+   "seconds": 120.27127575874329
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 280900000.0,
+   "final_objective": 3259.0,
+   "status": "infeasible",
+   "seconds": 124.10546565055847
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 291600000.0,
+   "final_objective": 3170.0,
+   "status": "infeasible",
+   "seconds": 128.65397882461548
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 302500000.0,
+   "final_objective": 2946.0,
+   "status": "infeasible",
+   "seconds": 133.53900384902954
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 313600000.0,
+   "final_objective": 3085.0,
+   "status": "infeasible",
+   "seconds": 139.46304178237915
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 324900000.0,
+   "final_objective": 3173.0,
+   "status": "infeasible",
+   "seconds": 144.136958360672
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 336400000.0,
+   "final_objective": 3235.0,
+   "status": "infeasible",
+   "seconds": 148.98754334449768
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 348100000.0,
+   "final_objective": 2841.0,
+   "status": "infeasible",
+   "seconds": 154.07054090499878
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 360000000.0,
+   "final_objective": 3211.0,
+   "status": "infeasible",
+   "seconds": 158.58762526512146
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 372100000.0,
+   "final_objective": 2932.0,
+   "status": "infeasible",
+   "seconds": 163.7621877193451
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 384400000.0,
+   "final_objective": 3090.0,
+   "status": "infeasible",
+   "seconds": 169.78214073181152
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 396900000.0,
+   "final_objective": 3160.0,
+   "status": "infeasible",
+   "seconds": 175.56670093536377
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 409600000.0,
+   "final_objective": 2886.0,
+   "status": "infeasible",
+   "seconds": 181.40300965309143
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 422500000.0,
+   "final_objective": 3180.0,
+   "status": "infeasible",
+   "seconds": 187.9106228351593
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 435600000.0,
+   "final_objective": 2965.0,
+   "status": "infeasible",
+   "seconds": 194.9285957813263
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 448900000.0,
+   "final_objective": 2808.0,
+   "status": "infeasible",
+   "seconds": 200.95100045204163
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 462400000.0,
+   "final_objective": 2983.0,
+   "status": "infeasible",
+   "seconds": 206.54819297790527
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 476100000.0,
+   "final_objective": 2977.0,
+   "status": "infeasible",
+   "seconds": 209.49136352539062
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 490000000.0,
+   "final_objective": 3227.0,
+   "status": "infeasible",
+   "seconds": 214.70763206481934
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 504100000.0,
+   "final_objective": 3017.0,
+   "status": "infeasible",
+   "seconds": 219.7176332473755
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 518400000.0,
+   "final_objective": 2801.0,
+   "status": "infeasible",
+   "seconds": 226.66525173187256
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 532900000.0,
+   "final_objective": 3200.0,
+   "status": "infeasible",
+   "seconds": 234.01646518707275
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 547600000.0,
+   "final_objective": 3110.0,
+   "status": "infeasible",
+   "seconds": 241.67675495147705
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 562500000.0,
+   "final_objective": 2976.0,
+   "status": "infeasible",
+   "seconds": 247.60252571105957
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 577600000.0,
+   "final_objective": 2844.0,
+   "status": "infeasible",
+   "seconds": 255.83184266090393
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 592900000.0,
+   "final_objective": 3557.0,
+   "status": "infeasible",
+   "seconds": 266.91994547843933
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 608400000.0,
+   "final_objective": 2984.0,
+   "status": "infeasible",
+   "seconds": 269.061954498291
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 624100000.0,
+   "final_objective": 3407.0,
+   "status": "infeasible",
+   "seconds": 276.5521123409271
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 640000000.0,
+   "final_objective": 3209.0,
+   "status": "infeasible",
+   "seconds": 283.03055596351624
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 656100000.0,
+   "final_objective": 3042.0,
+   "status": "infeasible",
+   "seconds": 290.568332195282
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 672400000.0,
+   "final_objective": 3409.0,
+   "status": "infeasible",
+   "seconds": 301.9278836250305
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 688900000.0,
+   "final_objective": 3146.0,
+   "status": "infeasible",
+   "seconds": 310.3973066806793
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 705600000.0,
+   "final_objective": 3156.0,
+   "status": "infeasible",
+   "seconds": 316.67909574508667
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 722500000.0,
+   "final_objective": 3117.0,
+   "status": "infeasible",
+   "seconds": 322.58916687965393
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 739600000.0,
+   "final_objective": 2983.0,
+   "status": "infeasible",
+   "seconds": 327.82716178894043
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 756900000.0,
+   "final_objective": 3054.0,
+   "status": "infeasible",
+   "seconds": 336.3175458908081
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 774400000.0,
+   "final_objective": 3142.0,
+   "status": "infeasible",
+   "seconds": 343.4961128234863
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 792100000.0,
+   "final_objective": 3208.0,
+   "status": "infeasible",
+   "seconds": 355.3366816043854
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 810000000.0,
+   "final_objective": 2806.0,
+   "status": "infeasible",
+   "seconds": 363.4775264263153
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 828100000.0,
+   "final_objective": 3163.0,
+   "status": "infeasible",
+   "seconds": 372.92580127716064
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 846400000.0,
+   "final_objective": 3027.0,
+   "status": "infeasible",
+   "seconds": 382.1225583553314
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 864900000.0,
+   "final_objective": 2781.0,
+   "status": "infeasible",
+   "seconds": 390.6319794654846
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 883600000.0,
+   "final_objective": 2650.0,
+   "status": "infeasible",
+   "seconds": 395.27130365371704
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 902500000.0,
+   "final_objective": 3096.0,
+   "status": "infeasible",
+   "seconds": 402.94422125816345
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 921600000.0,
+   "final_objective": 3081.0,
+   "status": "infeasible",
+   "seconds": 411.33392357826233
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 940900000.0,
+   "final_objective": 2909.0,
+   "status": "infeasible",
+   "seconds": 418.534716129303
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 960400000.0,
+   "final_objective": 2925.0,
+   "status": "infeasible",
+   "seconds": 433.4632866382599
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 980100000.0,
+   "final_objective": 2913.0,
+   "status": "infeasible",
+   "seconds": 441.61882758140564
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 1000000000.0,
+   "final_objective": 2914.0,
+   "status": "infeasible",
+   "seconds": 451.0631911754608
+  },
+  {
+   "source": "result_5_50.csv",
+   "cooling_factor": 0.999999,
+   "initial_temperature": 1020100000.0,
+   "final_objective": 3018.0,
+   "status": "infeasible",
+   "seconds": 460.1038362979889
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 400000.0,
+   "final_objective": 3326.0,
+   "status": "infeasible",
+   "seconds": 0.23305463790893555
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 900000.0,
+   "final_objective": 2637.0,
+   "status": "infeasible",
+   "seconds": 0.4629971981048584
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 1600000.0,
+   "final_objective": 1215.0,
+   "status": "infeasible",
+   "seconds": 0.8177142143249512
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 2500000.0,
+   "final_objective": 1210.0,
+   "status": "infeasible",
+   "seconds": 1.2681951522827148
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 3600000.0,
+   "final_objective": 1236.0,
+   "status": "infeasible",
+   "seconds": 1.9622700214385986
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 4900000.0,
+   "final_objective": 2887.0,
+   "status": "infeasible",
+   "seconds": 2.2371809482574463
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 6400000.0,
+   "final_objective": 1238.0,
+   "status": "infeasible",
+   "seconds": 2.8589069843292236
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 8100000.0,
+   "final_objective": 1219.0,
+   "status": "infeasible",
+   "seconds": 3.6422626972198486
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 10000000.0,
+   "final_objective": 1843.0,
+   "status": "infeasible",
+   "seconds": 4.467197418212891
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 12100000.0,
+   "final_objective": 1168.0,
+   "status": "infeasible",
+   "seconds": 5.393481492996216
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 14400000.0,
+   "final_objective": 2639.0,
+   "status": "infeasible",
+   "seconds": 6.393500328063965
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 16900000.0,
+   "final_objective": 1252.0,
+   "status": "infeasible",
+   "seconds": 7.576090097427368
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 19600000.0,
+   "final_objective": 1293.0,
+   "status": "infeasible",
+   "seconds": 8.744973182678223
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 22500000.0,
+   "final_objective": 3210.0,
+   "status": "infeasible",
+   "seconds": 10.168691873550415
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 25600000.0,
+   "final_objective": 1232.0,
+   "status": "infeasible",
+   "seconds": 11.43101954460144
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 28900000.0,
+   "final_objective": 1244.0,
+   "status": "infeasible",
+   "seconds": 12.987265825271606
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 32400000.0,
+   "final_objective": 3156.0,
+   "status": "infeasible",
+   "seconds": 14.609955310821533
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 36100000.0,
+   "final_objective": 2953.0,
+   "status": "infeasible",
+   "seconds": 16.22312903404236
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 40000000.0,
+   "final_objective": 1195.0,
+   "status": "infeasible",
+   "seconds": 17.953308820724487
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 44100000.0,
+   "final_objective": 1209.0,
+   "status": "infeasible",
+   "seconds": 19.72184443473816
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 48400000.0,
+   "final_objective": 1205.0,
+   "status": "infeasible",
+   "seconds": 21.660255670547485
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 52900000.0,
+   "final_objective": 1253.0,
+   "status": "infeasible",
+   "seconds": 23.609334468841553
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 57600000.0,
+   "final_objective": 1227.0,
+   "status": "infeasible",
+   "seconds": 25.782576084136963
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 62500000.0,
+   "final_objective": 1221.0,
+   "status": "infeasible",
+   "seconds": 27.73871612548828
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 67600000.0,
+   "final_objective": 1206.0,
+   "status": "infeasible",
+   "seconds": 30.40885353088379
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 72900000.0,
+   "final_objective": 1238.0,
+   "status": "infeasible",
+   "seconds": 32.741825103759766
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 78400000.0,
+   "final_objective": 3261.0,
+   "status": "infeasible",
+   "seconds": 35.175883293151855
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 84100000.0,
+   "final_objective": 1513.0,
+   "status": "infeasible",
+   "seconds": 38.118181467056274
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 90000000.0,
+   "final_objective": 1199.0,
+   "status": "infeasible",
+   "seconds": 40.76216650009155
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 96100000.0,
+   "final_objective": 1225.0,
+   "status": "infeasible",
+   "seconds": 43.0915641784668
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 102400000.0,
+   "final_objective": 2943.0,
+   "status": "infeasible",
+   "seconds": 45.65484070777893
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 108900000.0,
+   "final_objective": 1225.0,
+   "status": "infeasible",
+   "seconds": 48.6321165561676
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 115600000.0,
+   "final_objective": 2951.0,
+   "status": "infeasible",
+   "seconds": 51.68806338310242
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 122500000.0,
+   "final_objective": 1241.0,
+   "status": "infeasible",
+   "seconds": 54.64058208465576
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 129600000.0,
+   "final_objective": 1235.0,
+   "status": "infeasible",
+   "seconds": 57.527342557907104
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 136900000.0,
+   "final_objective": 1285.0,
+   "status": "infeasible",
+   "seconds": 60.65298938751221
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 144400000.0,
+   "final_objective": 2963.0,
+   "status": "infeasible",
+   "seconds": 63.78081774711609
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 152100000.0,
+   "final_objective": 1206.0,
+   "status": "infeasible",
+   "seconds": 68.56792688369751
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 160000000.0,
+   "final_objective": 1295.0,
+   "status": "infeasible",
+   "seconds": 70.61217617988586
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 168100000.0,
+   "final_objective": 2764.0,
+   "status": "infeasible",
+   "seconds": 74.38396263122559
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 176400000.0,
+   "final_objective": 1207.0,
+   "status": "infeasible",
+   "seconds": 78.46853733062744
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 184900000.0,
+   "final_objective": 1235.0,
+   "status": "infeasible",
+   "seconds": 82.17562627792358
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 193600000.0,
+   "final_objective": 1242.0,
+   "status": "infeasible",
+   "seconds": 86.16503691673279
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 202500000.0,
+   "final_objective": 2124.0,
+   "status": "infeasible",
+   "seconds": 90.64137506484985
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 211600000.0,
+   "final_objective": 2950.0,
+   "status": "infeasible",
+   "seconds": 94.38762259483337
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 220900000.0,
+   "final_objective": 2895.0,
+   "status": "infeasible",
+   "seconds": 98.11636257171631
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 230400000.0,
+   "final_objective": 2946.0,
+   "status": "infeasible",
+   "seconds": 102.41383361816406
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 240100000.0,
+   "final_objective": 3076.0,
+   "status": "infeasible",
+   "seconds": 106.65439701080322
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 250000000.0,
+   "final_objective": 2938.0,
+   "status": "infeasible",
+   "seconds": 110.79572248458862
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 260100000.0,
+   "final_objective": 1570.0,
+   "status": "infeasible",
+   "seconds": 115.94438290596008
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 270400000.0,
+   "final_objective": 1247.0,
+   "status": "infeasible",
+   "seconds": 122.03807616233826
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 280900000.0,
+   "final_objective": 1218.0,
+   "status": "infeasible",
+   "seconds": 124.81108093261719
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 291600000.0,
+   "final_objective": 1213.0,
+   "status": "infeasible",
+   "seconds": 137.65924620628357
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 302500000.0,
+   "final_objective": 3105.0,
+   "status": "infeasible",
+   "seconds": 136.69856715202332
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 313600000.0,
+   "final_objective": 1283.0,
+   "status": "infeasible",
+   "seconds": 140.28026413917542
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 324900000.0,
+   "final_objective": 1229.0,
+   "status": "infeasible",
+   "seconds": 144.5625216960907
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 336400000.0,
+   "final_objective": 3193.0,
+   "status": "infeasible",
+   "seconds": 149.9870388507843
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 348100000.0,
+   "final_objective": 1228.0,
+   "status": "infeasible",
+   "seconds": 155.97716736793518
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 360000000.0,
+   "final_objective": 3331.0,
+   "status": "infeasible",
+   "seconds": 160.6355173587799
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 372100000.0,
+   "final_objective": 1228.0,
+   "status": "infeasible",
+   "seconds": 166.19779801368713
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 384400000.0,
+   "final_objective": 2874.0,
+   "status": "infeasible",
+   "seconds": 172.40758275985718
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 396900000.0,
+   "final_objective": 1236.0,
+   "status": "infeasible",
+   "seconds": 177.6100890636444
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 409600000.0,
+   "final_objective": 2041.0,
+   "status": "infeasible",
+   "seconds": 183.8260817527771
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 422500000.0,
+   "final_objective": 2819.0,
+   "status": "infeasible",
+   "seconds": 187.08813405036926
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 435600000.0,
+   "final_objective": 1220.0,
+   "status": "infeasible",
+   "seconds": 194.2295844554901
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 448900000.0,
+   "final_objective": 1291.0,
+   "status": "infeasible",
+   "seconds": 199.82805919647217
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 462400000.0,
+   "final_objective": 2770.0,
+   "status": "infeasible",
+   "seconds": 206.8808138370514
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 476100000.0,
+   "final_objective": 2973.0,
+   "status": "infeasible",
+   "seconds": 213.72409653663635
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 490000000.0,
+   "final_objective": 1244.0,
+   "status": "infeasible",
+   "seconds": 219.774799823761
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 504100000.0,
+   "final_objective": 1212.0,
+   "status": "infeasible",
+   "seconds": 226.11870956420898
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 518400000.0,
+   "final_objective": 1206.0,
+   "status": "infeasible",
+   "seconds": 232.56415057182312
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 532900000.0,
+   "final_objective": 1254.0,
+   "status": "infeasible",
+   "seconds": 237.95170950889587
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 547600000.0,
+   "final_objective": 1204.0,
+   "status": "infeasible",
+   "seconds": 244.91644024848938
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 562500000.0,
+   "final_objective": 1169.0,
+   "status": "infeasible",
+   "seconds": 252.1460587978363
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 577600000.0,
+   "final_objective": 1219.0,
+   "status": "infeasible",
+   "seconds": 263.81946444511414
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 592900000.0,
+   "final_objective": 3229.0,
+   "status": "infeasible",
+   "seconds": 264.52128171920776
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 608400000.0,
+   "final_objective": 3066.0,
+   "status": "infeasible",
+   "seconds": 272.50370931625366
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 624100000.0,
+   "final_objective": 1474.0,
+   "status": "infeasible",
+   "seconds": 281.47286558151245
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 640000000.0,
+   "final_objective": 1194.0,
+   "status": "infeasible",
+   "seconds": 287.82054901123047
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 656100000.0,
+   "final_objective": 1228.0,
+   "status": "infeasible",
+   "seconds": 294.3646275997162
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 672400000.0,
+   "final_objective": 2920.0,
+   "status": "infeasible",
+   "seconds": 298.80079793930054
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 688900000.0,
+   "final_objective": 1193.0,
+   "status": "infeasible",
+   "seconds": 305.7980921268463
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 705600000.0,
+   "final_objective": 3190.0,
+   "status": "infeasible",
+   "seconds": 314.2535502910614
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 722500000.0,
+   "final_objective": 1262.0,
+   "status": "infeasible",
+   "seconds": 323.15994334220886
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 739600000.0,
+   "final_objective": 1219.0,
+   "status": "infeasible",
+   "seconds": 331.7583997249603
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 756900000.0,
+   "final_objective": 1278.0,
+   "status": "infeasible",
+   "seconds": 338.7201488018036
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 774400000.0,
+   "final_objective": 2998.0,
+   "status": "infeasible",
+   "seconds": 350.1028263568878
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 792100000.0,
+   "final_objective": 1232.0,
+   "status": "infeasible",
+   "seconds": 353.7241950035095
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 810000000.0,
+   "final_objective": 2594.0,
+   "status": "infeasible",
+   "seconds": 360.0770523548126
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 828100000.0,
+   "final_objective": 3339.0,
+   "status": "infeasible",
+   "seconds": 374.3926591873169
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 846400000.0,
+   "final_objective": 1207.0,
+   "status": "infeasible",
+   "seconds": 380.66196155548096
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 864900000.0,
+   "final_objective": 1257.0,
+   "status": "infeasible",
+   "seconds": 390.1539075374603
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 883600000.0,
+   "final_objective": 3117.0,
+   "status": "infeasible",
+   "seconds": 400.84971356391907
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 902500000.0,
+   "final_objective": 2809.0,
+   "status": "infeasible",
+   "seconds": 406.86221408843994
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 921600000.0,
+   "final_objective": 2834.0,
+   "status": "infeasible",
+   "seconds": 414.856906414032
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 940900000.0,
+   "final_objective": 1229.0,
+   "status": "infeasible",
+   "seconds": 422.29999685287476
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 960400000.0,
+   "final_objective": 1185.0,
+   "status": "infeasible",
+   "seconds": 431.24780797958374
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 980100000.0,
+   "final_objective": 1205.0,
+   "status": "infeasible",
+   "seconds": 440.8508508205414
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 1000000000.0,
+   "final_objective": 1200.0,
+   "status": "infeasible",
+   "seconds": 452.8435175418854
+  },
+  {
+   "source": "result_5_50_cooling_factor_3.csv",
+   "cooling_factor": 0.999,
+   "initial_temperature": 1020100000.0,
+   "final_objective": 1193.0,
+   "status": "infeasible",
+   "seconds": 463.21151399612427
+  }
+ ],
+ "note": "The 201 runs committed in butkeraites/simulated-annealing results/*.csv, unmodified."
+}

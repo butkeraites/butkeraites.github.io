@@ -32,10 +32,26 @@ const pct1 = v => `${(v * 100).toFixed(1)}%`
 
 /* ------------------------------------------------------------------- data */
 
-/** Fired on load so the container is already up when the first slider moves. */
+/**
+ * Fired on load so the container is already up when the first slider moves.
+ *
+ * This matters more than it looks: Cloud Run's own startup_latencies metric puts
+ * a cold start on this image at 9.6-12.7 s (mean 11.8), dominated by pulling and
+ * starting a 500 MB solver image rather than by Python. A visitor who reads the
+ * page for ten seconds never sees it; one who grabs a slider immediately would,
+ * so the promise below lets the UI say which of the two is happening.
+ */
+let warm = null
 function warmUp() {
-  fetch(`${API}/status`, { mode: 'cors' }).catch(() => {})
+  const started = performance.now()
+  warm = fetch(`${API}/status`, { mode: 'cors' })
+    .then(() => ({ ok: true, ms: performance.now() - started }))
+    .catch(() => ({ ok: false, ms: performance.now() - started }))
+  return warm
 }
+
+/** True while the container is still starting, so the UI can say so. */
+let warmedAt = null
 
 async function optimize(params, signal) {
   const res = await fetch(`${API}/portfolio/optimize`, {
@@ -62,7 +78,7 @@ async function optimize(params, signal) {
 export function mount(root, fixture) {
   root.innerHTML = ''
   root.classList.add('viz')
-  warmUp()
+  warmUp().then(r => { warmedAt = r.ms })
 
   const state = {
     target_return: 0.12,
@@ -326,7 +342,9 @@ export function mount(root, fixture) {
   /** One solve per gesture, not one per pixel. */
   function schedule() {
     clearTimeout(debounce)
-    status.textContent = 'Solving…'
+    status.textContent = warmedAt === null
+      ? 'Waking the solver — it scales to zero, so the first request pays for the container starting. About ten seconds, once.'
+      : 'Solving…'
     debounce = setTimeout(run, 220)
   }
 

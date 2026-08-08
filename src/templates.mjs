@@ -341,8 +341,12 @@ export function renderProject({ profile, project: p, origin }) {
         { name: p.title, url: p.url },
       ], origin),
     ],
+    // The demo's stylesheet and module load only on pages that have one, so a
+    // reader of a case study pays for neither.
     extraHead: p.demoModule
-      ? `<link rel="modulepreload" href="${esc(p.demoModule)}">\n<script type="module" src="${esc(p.demoModule)}" defer></script>`
+      ? `<link rel="stylesheet" href="/assets/demo.css">\n`
+        + `<link rel="modulepreload" href="${esc(p.demoModule)}">\n`
+        + `<script type="module" src="${esc(p.demoModule)}"></script>`
       : '',
   })
 }

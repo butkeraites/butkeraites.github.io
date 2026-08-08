@@ -3,59 +3,132 @@
     "public": "dist",
     "cleanUrls": true,
     "trailingSlash": true,
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "headers": [
+      {
+        "//": "ES modules must arrive with a JavaScript MIME type or the browser refuses to execute them, and .mjs is exactly the extension hosts get wrong.",
+        "source": "**/*.mjs",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/javascript; charset=utf-8"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=3600, must-revalidate"
+          }
+        ]
+      },
       {
         "//": "Machine-readable surfaces: correct content type, CORS open, and cached briefly so an agent re-reading them gets fresh data.",
         "source": "**/*.@(md|txt)",
         "headers": [
-          { "key": "Content-Type", "value": "text/markdown; charset=utf-8" },
-          { "key": "Access-Control-Allow-Origin", "value": "*" },
-          { "key": "Cache-Control", "value": "public, max-age=600" }
+          {
+            "key": "Content-Type",
+            "value": "text/markdown; charset=utf-8"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=600"
+          }
         ]
       },
       {
         "source": "/llms.txt",
-        "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain; charset=utf-8"
+          }
+        ]
       },
       {
         "source": "/llms-full.txt",
-        "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain; charset=utf-8"
+          }
+        ]
       },
       {
         "source": "/robots.txt",
-        "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain; charset=utf-8"
+          }
+        ]
       },
       {
         "source": "/profile.json",
         "headers": [
-          { "key": "Content-Type", "value": "application/json; charset=utf-8" },
-          { "key": "Access-Control-Allow-Origin", "value": "*" },
-          { "key": "Cache-Control", "value": "public, max-age=600" }
+          {
+            "key": "Content-Type",
+            "value": "application/json; charset=utf-8"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=600"
+          }
         ]
       },
       {
         "//": "Fingerprint-free assets, so a short cache with revalidation rather than immutable.",
         "source": "/assets/**",
-        "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }]
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=3600, must-revalidate"
+          }
+        ]
       },
       {
         "//": "WASM solvers: large, versioned by path, safe to cache hard.",
         "source": "**/*.wasm",
         "headers": [
-          { "key": "Content-Type", "value": "application/wasm" },
-          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+          {
+            "key": "Content-Type",
+            "value": "application/wasm"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
         ]
       },
       {
         "//": "No cross-origin isolation on purpose: SharedArrayBuffer is not used anywhere, and COOP/COEP would break embeds site-wide.",
         "source": "**",
         "headers": [
-          { "key": "X-Content-Type-Options", "value": "nosniff" },
-          { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-          { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-          { "key": "Permissions-Policy", "value": "geolocation=(), camera=(), microphone=(), interest-cohort=()" },
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "SAMEORIGIN"
+          },
+          {
+            "key": "Permissions-Policy",
+            "value": "geolocation=(), camera=(), microphone=(), interest-cohort=()"
+          },
           {
             "key": "Content-Security-Policy",
             "value": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'"

@@ -241,3 +241,27 @@
    from the categorical series colours. */
 .stat.is-warn { border-color: var(--series-2); }
 .stat.is-warn .stat-value { color: var(--series-2); }
+
+/* --------------------------------------------------------- floor plan */
+
+.floorplan { background: var(--viz-surface); }
+.solver-strip { font-family: var(--mono); font-size: 12px; line-height: 1.6; }
+.solver-strip strong { color: var(--viz-ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.aisle-row { display: flex; gap: 6px; margin-top: 8px; }
+.aisle-slider {
+  -webkit-appearance: none; appearance: none;
+  flex: 1; min-width: 0; height: 18px; background: transparent; cursor: pointer;
+}
+.aisle-slider::-webkit-slider-runnable-track { height: 3px; border-radius: 2px; background: var(--viz-grid); }
+.aisle-slider::-moz-range-track { height: 3px; border-radius: 2px; background: var(--viz-grid); }
+.aisle-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 11px; height: 11px; margin-top: -4px; border-radius: 50%;
+  background: var(--accent); border: 1.5px solid var(--viz-surface);
+}
+.aisle-slider::-moz-range-thumb {
+  width: 11px; height: 11px; border-radius: 50%;
+  background: var(--accent); border: 1.5px solid var(--viz-surface);
+}
+.aisle-slider:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

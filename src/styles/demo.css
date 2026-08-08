@@ -1,0 +1,202 @@
+/* Demo chrome and chart tokens.
+ *
+ * The two modes are separately selected palettes, not one flipped palette: the
+ * dark steps are chosen for the dark surface and validated against it. Both are
+ * declared under the media query (OS setting) and under [data-theme] (explicit
+ * choice) so the toggle wins in either direction.
+ *
+ * Categorical slots come from the validated three-slot set. All-pairs checks
+ * pass in both modes; the light-mode aqua sits at 2.74:1 against the surface,
+ * so every chart using it ships direct labels and a table view — the relief
+ * that requirement calls for. */
+
+.viz {
+  --viz-surface: #ffffff;
+  --viz-grid: #e8ecec;
+  --viz-rule: #9aa6ac;
+  --viz-ink: #161d21;
+  --viz-ink-soft: #56636a;
+
+  --series-1: #2a78d6;   /* blue    — eta */
+  --series-2: #eb6834;   /* orange  — brittleness */
+  --series-3: #1baf7a;   /* aqua    — NVDIC */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .viz {
+    --viz-surface: #182027;
+    --viz-grid: #2a353c;
+    --viz-rule: #6d7c84;
+    --viz-ink: #e9eef0;
+    --viz-ink-soft: #9fadb3;
+
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+  }
+}
+
+:root[data-theme="dark"] .viz {
+  --viz-surface: #182027;
+  --viz-grid: #2a353c;
+  --viz-rule: #6d7c84;
+  --viz-ink: #e9eef0;
+  --viz-ink-soft: #9fadb3;
+
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #199e70;
+}
+
+/* ------------------------------------------------------------------ layout */
+
+.viz { background: var(--viz-surface); color: var(--viz-ink); }
+
+.demo-panel { padding: 22px 24px; border-top: 1px solid var(--line-soft); }
+.demo-panel:first-child { border-top: none; }
+.demo-panel > h3 {
+  font-family: var(--sans); font-size: 15px; font-weight: 650;
+  letter-spacing: -0.005em; margin-bottom: 3px;
+}
+.demo-panel > .panel-note {
+  font-size: 14px; color: var(--viz-ink-soft); margin-bottom: 18px; max-width: 62ch;
+}
+
+.panel-grid { display: grid; grid-template-columns: 220px 1fr; gap: 26px; align-items: start; }
+@media (max-width: 720px) { .panel-grid { grid-template-columns: 1fr; gap: 18px; } }
+
+/* ---------------------------------------------------------------- controls */
+
+.controls { display: flex; flex-direction: column; gap: 18px; }
+.control-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.control label { font-size: 13px; font-weight: 600; color: var(--viz-ink); }
+.control output {
+  font-family: var(--mono); font-size: 13px; font-variant-numeric: tabular-nums;
+  color: var(--accent); font-weight: 600;
+}
+.control-hint { font-size: 12px; color: var(--viz-ink-soft); margin-top: 5px; line-height: 1.45; }
+
+.control input[type="range"] {
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 22px; background: transparent; margin-top: 6px; cursor: pointer;
+}
+.control input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px; border-radius: 2px; background: var(--viz-grid);
+}
+.control input[type="range"]::-moz-range-track {
+  height: 4px; border-radius: 2px; background: var(--viz-grid);
+}
+.control input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 16px; height: 16px; margin-top: -6px; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--viz-surface);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.control input[type="range"]::-moz-range-thumb {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--viz-surface);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.control input[type="range"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+.demo-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 4px; }
+.demo-actions button {
+  font: inherit; font-size: 13.5px; font-weight: 600;
+  padding: 8px 15px; border-radius: 7px; cursor: pointer;
+  border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink);
+}
+.demo-actions button.ghost { background: transparent; color: var(--accent); }
+.demo-actions button:hover { opacity: 0.88; }
+.demo-actions button:disabled { opacity: 0.45; cursor: progress; }
+
+/* ------------------------------------------------------------------ plots */
+
+.plot-host { position: relative; }
+.plot { display: block; width: 100%; height: auto; overflow: visible; }
+.plot-grid line { stroke: var(--viz-grid); stroke-width: 1; }
+.plot text.tick, .plot text.axis-title {
+  font-family: var(--mono); font-size: 10px; fill: var(--viz-ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+.plot text.axis-title { font-family: var(--sans); font-size: 11px; }
+/* Labels wear text tokens, never the series colour — a light categorical hue
+   is illegible as text on the surface. Identity comes from the mark beside it. */
+.plot text.point-label {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  fill: var(--viz-ink); font-variant-numeric: tabular-nums;
+}
+.plot text.rule-label {
+  font-family: var(--mono); font-size: 10px; fill: var(--viz-ink-soft);
+}
+
+.plot-tip {
+  position: absolute; transform: translate(-50%, calc(-100% - 14px));
+  background: var(--viz-surface); border: 1px solid var(--line);
+  border-radius: 7px; padding: 8px 11px; pointer-events: none;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.14); font-size: 12.5px;
+  display: grid; grid-template-columns: 1fr auto; gap: 3px 16px; white-space: nowrap; z-index: 5;
+}
+.plot-tip .tip-x {
+  grid-column: 1 / -1; font-family: var(--mono); font-size: 11px;
+  color: var(--viz-ink-soft); padding-bottom: 3px; border-bottom: 1px solid var(--line-soft);
+  margin-bottom: 2px;
+}
+.plot-tip .k { display: flex; align-items: center; gap: 7px; color: var(--viz-ink-soft); }
+.plot-tip .k i { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+.plot-tip b { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--viz-ink); }
+
+.plot-legend {
+  display: flex; flex-wrap: wrap; gap: 8px 20px; list-style: none;
+  margin: 10px 0 0; padding: 0; font-size: 12.5px; color: var(--viz-ink-soft);
+}
+.plot-legend li { display: flex; align-items: center; gap: 7px; }
+.plot-legend i { width: 11px; height: 3px; border-radius: 2px; flex: none; }
+
+.plot-caption {
+  font-size: 12.5px; color: var(--viz-ink-soft); margin-top: 8px; max-width: 64ch; line-height: 1.5;
+}
+
+/* ------------------------------------------------------------- stat tiles */
+
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 14px; margin-top: 16px; }
+.stat {
+  border: 1px solid var(--line); border-radius: 8px; padding: 13px 15px; background: var(--viz-surface);
+}
+.stat .stat-label { font-size: 11.5px; color: var(--viz-ink-soft); line-height: 1.35; }
+.stat .stat-value {
+  font-family: var(--mono); font-size: 20px; font-weight: 600;
+  font-variant-numeric: tabular-nums; margin-top: 5px; color: var(--viz-ink);
+}
+.stat .stat-value small { font-size: 12px; font-weight: 500; color: var(--viz-ink-soft); }
+.stat.is-pick { border-color: var(--accent); }
+
+/* ------------------------------------------------------------ table view */
+
+.table-view { margin-top: 14px; }
+.table-view summary {
+  font-size: 12.5px; color: var(--accent); cursor: pointer; font-weight: 600;
+  list-style: none; display: inline-flex; align-items: center; gap: 6px;
+}
+.table-view summary::-webkit-details-marker { display: none; }
+.table-view summary::before { content: "▸"; transition: transform 0.15s; }
+.table-view[open] summary::before { transform: rotate(90deg); }
+.table-view .scroll { overflow-x: auto; margin-top: 10px; }
+.table-view table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.table-view caption { text-align: left; font-size: 12px; color: var(--viz-ink-soft); padding-bottom: 8px; }
+.table-view th, .table-view td {
+  text-align: left; padding: 7px 12px; border-bottom: 1px solid var(--line-soft);
+}
+.table-view thead th {
+  font-family: var(--mono); font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--viz-ink-soft); font-weight: 600;
+}
+.table-view tbody th { font-weight: 500; color: var(--viz-ink-soft); }
+.table-view td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* --------------------------------------------------------------- loading */
+
+.demo-loading { padding: 30px 24px; font-size: 14px; color: var(--viz-ink-soft); }
+
+@media (prefers-reduced-motion: reduce) {
+  .table-view summary::before { transition: none; }
+}

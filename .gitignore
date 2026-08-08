@@ -1,6 +1,38 @@
 # ALLOWLIST: ignora tudo por padrão — só o que tem "!" pode ser commitado.
 # Proteção: Profile.pdf e qualquer arquivo pessoal desta pasta NUNCA vão para o repo público.
 *
+
+# --- fonte do site ---
+!/content/
+!/content/**
+!/src/
+!/src/**
+!/scripts/
+!/scripts/**
+!/.github/
+!/.github/**
+
+# --- configuração na raiz ---
+!/build.mjs
+!/package.json
+!/package-lock.json
+!/firebase.json
+!/.firebaserc
+!/.nojekyll
+!/.gitignore
+!/README.md
 !index.html
-!.nojekyll
-!.gitignore
+
+# --- nunca, mesmo que um "!" acima pareça permitir ---
+# (regras posteriores vencem; esta seção é a rede de segurança)
+/dist/
+node_modules/
+*.pdf
+.env
+.env.*
+*key*.json
+*credential*.json
+*secret*.json
+*.pem
+*.p12
+.DS_Store

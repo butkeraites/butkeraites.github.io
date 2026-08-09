@@ -270,3 +270,14 @@ footer .fine { margin-top: 22px; font-size: 13px; color: var(--ink-faint); }
   font-size: 13px; line-height: 1.4; color: var(--ink-soft);
 }
 .proof-strip li::first-line { color: var(--ink); }
+
+/* -------------------------------------------------------- availability */
+
+/* One confident line, not a banner and not an apology. A recruiter's first
+   internal question is whether they can hire you at all; leaving it unanswered
+   means some of them assume the worst and never ask. */
+.availability {
+  margin-top: 22px; font-size: 14.5px; color: var(--ink-soft);
+  border-left: 3px solid var(--accent); padding-left: 14px; max-width: 56ch;
+}
+.availability strong { color: var(--ink); font-weight: 620; }

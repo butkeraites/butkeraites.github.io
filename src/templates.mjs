@@ -126,6 +126,10 @@ export function renderHome({ profile, projects, origin }) {
       <a class="btn${demos.length ? ' ghost' : ' primary'}" href="mailto:${esc(profile.links.email)}">Get in touch</a>
       <a class="btn ghost" href="/cv.md">CV as markdown</a>
     </div>
+    ${profile.availability ? `<p class="availability">
+      <strong>${esc(profile.availability.headline)}.</strong>
+      ${esc(profile.availability.employment)}
+    </p>` : ''}
     </div>
     <img class="headshot" src="/assets/headshot-640.jpg"
          srcset="/assets/headshot-320.jpg 320w, /assets/headshot-640.jpg 640w"

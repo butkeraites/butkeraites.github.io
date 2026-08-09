@@ -105,6 +105,13 @@ export function llmsTxt(profile, projects, origin) {
   out.push(`- [Full site corpus](${origin}/llms-full.txt): every page concatenated, for single-request ingestion`)
   out.push('')
 
+  if (profile.availability) {
+    out.push('## Availability', '')
+    out.push(`${profile.availability.headline}. ${profile.availability.employment}`)
+    out.push(`Location: ${profile.availability.location}`)
+    out.push('')
+  }
+
   out.push('## Contact', '')
   out.push(`- [Email](mailto:${links.email})`)
   out.push(`- [GitHub](${links.github})`)
@@ -157,6 +164,7 @@ export function publicProfile(profile, projects, origin) {
     identifiers: identity.identifiers,
     links,
 
+    availability: profile.availability ?? null,
     expertise,
 
     experience: profile.experience.map(e => ({
@@ -222,6 +230,10 @@ export function cvMarkdown(profile, projects) {
     `- ORCID: ${identity.identifiers.orcid}`,
     '',
   ]
+
+  if (profile.availability) {
+    out.push(`**${profile.availability.headline}.** ${profile.availability.employment}`, '')
+  }
 
   out.push('## Selected work', '')
   for (const w of profile.selectedWork) {

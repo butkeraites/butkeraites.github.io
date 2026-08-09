@@ -1,6 +1,6 @@
 {
   "$comment": "Single source of truth. build.mjs derives every representation from this file: HTML pages, markdown twins, llms.txt, llms-full.txt, sitemap.xml, profile.json and the JSON-LD blocks. Edit here, never in the output.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "canonicalOrigin": "https://butkeraites.com",
   "identity": {
     "name": "Renan Butkeraites",
@@ -87,6 +87,10 @@
       "value": "Kennesaw, GA (US)"
     },
     {
+      "label": "Availability",
+      "value": "Contract or advisory now · US work authorization in progress"
+    },
+    {
       "label": "Work model",
       "value": "Remote, global"
     },
@@ -112,7 +116,7 @@
     "Since then I've applied that lens in insurance, banking, rail logistics, public transit, and data platforms: always the same job, **turning a messy real-world decision into a model, and the model into production software**. I've led teams through that whole arc — hiring, mentoring, pair programming, and shipping.",
     "Today I manage technology for **SG Global Group** in Kennesaw, Georgia — leading legal AI and LLM initiatives for SG LAW LLP — while directing technology at **Fresh Codes**, an AI-driven product studio, with remote teams and global clients. Off the clock: mathematical puzzles, good food, and music — sometimes all three while putting my daughter to sleep."
   ],
-  "closing": "I take the decisions nobody can make by hand — routing, allocation, scheduling under uncertainty — and turn them into solvers that survive contact with production. If that is the shape of your problem, or you want to argue with one of the demos above, write to me.",
+  "closing": "I take the decisions nobody can make by hand — routing, allocation, scheduling under uncertainty — and turn them into solvers that survive contact with production. Available for contract and advisory work now, and open to talking with teams hiring further out. If that is the shape of your problem, or you just want to argue with one of the demos above, write to me.",
   "selectedWork": [
     {
       "org": "Nitryx → Progress Rail · A Caterpillar Company",
@@ -324,5 +328,16 @@
       "type": "Thesis",
       "note": "Advisors: L. L. Salles Neto & W. A. Lodwick"
     }
-  ]
+  ],
+  "availability": {
+    "status": "open",
+    "headline": "Open to conversations now",
+    "engagement": [
+      "contract",
+      "advisory"
+    ],
+    "employment": "US work authorization in progress; contract and advisory engagements available today.",
+    "location": "Kennesaw, GA (US). Remote, worldwide.",
+    "note": "Happy to talk to teams planning ahead — timelines on both sides usually line up better than people expect."
+  }
 }

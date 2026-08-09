@@ -145,6 +145,37 @@
           }
         ]
       }
+    ],
+    "rewrites": [
+      {
+        "//": "The solver service, same-origin. An agent connecting to butkeraites.com/mcp reaches the real MCP server on Cloud Run \u2014 no CORS, no second certificate, and the backend URL never appears in the page. Both slash forms are listed because trailingSlash:true would otherwise 301 a POST, and a redirected POST arrives without its body.",
+        "source": "/mcp",
+        "run": {
+          "serviceId": "sirom",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/mcp/",
+        "run": {
+          "serviceId": "sirom",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/mcp.json",
+        "run": {
+          "serviceId": "sirom",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/api/**",
+        "run": {
+          "serviceId": "sirom",
+          "region": "us-central1"
+        }
+      }
     ]
   }
 }

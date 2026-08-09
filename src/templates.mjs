@@ -114,6 +114,9 @@ export function renderHome({ profile, projects, origin }) {
     <p class="kicker">${esc(identity.role)}</p>
     <h1>${esc(identity.headline)}</h1>
     <p class="lede">${inline(identity.shortBio)}</p>
+    ${identity.proof?.length ? `<ul class="proof-strip">
+      ${identity.proof.map(p => `<li>${esc(p)}</li>`).join('\n      ')}
+    </ul>` : ''}
     <ul class="meta-row">
       ${identity.currentPositions.map(p => `<li>${esc(p.title)} @ ${esc(p.org)}</li>`).join('\n      ')}
       <li>${esc(identity.location.locality)}, ${esc(identity.location.region)} — ${esc(identity.location.workModel.toLowerCase())}</li>

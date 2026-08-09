@@ -1,22 +1,22 @@
 {
   "$comment": "Single source of truth. build.mjs derives every representation from this file: HTML pages, markdown twins, llms.txt, llms-full.txt, sitemap.xml, profile.json and the JSON-LD blocks. Edit here, never in the output.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "canonicalOrigin": "https://butkeraites.com",
   "identity": {
     "name": "Renan Butkeraites",
     "legalName": "Renan Brito Cano Butkeraites",
     "pronouns": null,
-    "headline": "I turn optimization research into systems that ship.",
-    "shortBio": "Engineering leader with a PhD in Operations Research: a decade in the field, eight years building the Python backends, decision-support systems and AI products that carry the models into production.",
-    "role": "Engineering leader · Optimization specialist",
+    "headline": "I put optimization in production. Now I'm making it safe for an agent to drive.",
+    "shortBio": "PhD in Operations Research and eight years building the Python backends the models actually run in — a vehicle-routing engine across 40,000+ locations, from whiteboard to production in 16 months with a team of six, and a robust optimization method published in Expert Systems with Applications with Michel Gendreau.",
+    "role": "Staff Engineer, Optimization & Decision Systems · PhD, Operations Research",
     "currentPositions": [
       {
-        "title": "Information Technology Manager",
-        "org": "SG Global Group"
+        "title": "Director of Technology",
+        "org": "Fresh Codes (AI product studio)"
       },
       {
-        "title": "Director of Technology",
-        "org": "Fresh Codes"
+        "title": "Technology Manager — LLM systems",
+        "org": "SG Global Group / SG LAW LLP"
       }
     ],
     "location": {
@@ -31,7 +31,13 @@
     ],
     "identifiers": {
       "orcid": "0000-0002-5830-0466"
-    }
+    },
+    "proof": [
+      "PhD, Operations Research (UNIFESP/ITA)",
+      "40k-location routing engine, in production",
+      "Published in Expert Systems with Applications, with Michel Gendreau",
+      "4 solvers running live on this page"
+    ]
   },
   "links": {
     "email": "rbritobut@gmail.com",
@@ -106,7 +112,7 @@
     "Since then I've applied that lens in insurance, banking, rail logistics, public transit, and data platforms: always the same job, **turning a messy real-world decision into a model, and the model into production software**. I've led teams through that whole arc — hiring, mentoring, pair programming, and shipping.",
     "Today I manage technology for **SG Global Group** in Kennesaw, Georgia — leading legal AI and LLM initiatives for SG LAW LLP — while directing technology at **Fresh Codes**, an AI-driven product studio, with remote teams and global clients. Off the clock: mathematical puzzles, good food, and music — sometimes all three while putting my daughter to sleep."
   ],
-  "closing": "I solve chronic problems — the ones that keep coming back no matter what you throw at them. If you're facing one, reach out: I can help you see it in a different light. And who knows — that's exactly how the best collaborations begin.",
+  "closing": "I take the decisions nobody can make by hand — routing, allocation, scheduling under uncertainty — and turn them into solvers that survive contact with production. If that is the shape of your problem, or you want to argue with one of the demos above, write to me.",
   "selectedWork": [
     {
       "org": "Nitryx → Progress Rail · A Caterpillar Company",
@@ -187,7 +193,7 @@
       "to": null,
       "role": "Information Technology Manager",
       "org": "SG Global Group",
-      "desc": "Leading IT operations and technology strategy for SG LAW LLP (Kennesaw, GA): LLM-powered legal solutions for research, contract review, and document analysis; governance of confidential legal datasets (anonymization, redaction, privacy compliance); cybersecurity across AI systems; firm-wide AI adoption and training."
+      "desc": "Built and shipped LLM systems for legal research, contract review and document analysis at SG LAW LLP — retrieval over confidential case material, evaluation of model output against counsel review, and the anonymisation and redaction pipeline that made the corpus usable at all. Owns IT strategy, security across the AI systems, and firm-wide adoption."
     },
     {
       "from": "2025",

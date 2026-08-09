@@ -10,7 +10,7 @@ repo: https://github.com/butkeraites/hardness
 license: MIT
 techniques: ["Robust optimization", "Interval uncertainty", "Monte Carlo", "Formal verification"]
 stack: ["Python", "Agda", "FastAPI", "NumPy"]
-metrics: [{"label": "Measure range", "value": "η ∈ [0, 1], continuous"}, {"label": "Closed-form evaluation", "value": "1.6 µs"}, {"label": "20,000-scenario simulation", "value": "9 ms"}, {"label": "Core theory", "value": "machine-checked in Agda"}]
+metrics: [{"label": "Measure range", "value": "η ∈ [0, 1], continuous"}, {"label": "Closed-form evaluation", "value": "1.6 µs"}, {"label": "20,000-scenario simulation", "value": "9 ms"}, {"label": "Mechanized in Agda", "value": "2 lemmas, --safe, zero postulates"}]
 ---
 
 ## The question nobody asks precisely
@@ -54,12 +54,20 @@ fraction of what the naive choice delivers — at identical spend.
 
 ## The part I am most attached to
 
-The core theory is **formalized in Agda** and machine-checked. Not because a
-referee asked, but because a robustness measure that is itself unproven is a
-peculiar thing to publish.
+Part of the theory is **formalized in Agda and machine-checked** — 309 lines
+across seven modules, compiled under `--safe` with **zero postulates**. Nothing
+is assumed; everything stated is derived.
 
-That formalization is the audit trail: it says the properties claimed for η are
-not claimed on the strength of my careful reading of my own proof.
+Two lemmas are discharged: boundedness of η, and the complementarity half of
+Lemma 1. Both are proved against an abstract `RealsWithIntegral` interface, and
+the library ships a genuinely non-degenerate instance over ℚ — so the proofs
+say something, rather than holding vacuously on a one-point carrier.
+
+**What is not yet mechanized: the analytic core.** The supremum and the integral
+are interface obligations, not theorems. Saying "the core theory is
+machine-checked" would be a larger claim than the repository supports, and the
+boundary is the interesting part — a formalization is worth exactly as much as
+your willingness to state where it stops.
 
 ## Composition
 

@@ -11,7 +11,7 @@ repo: https://github.com/butkeraites/sirom
 license: MIT
 techniques: ["Robust optimization", "Monte Carlo sampling", "Linear programming", "Clustering"]
 stack: ["Python", "OR-Tools", "scikit-learn", "NumPy"]
-metrics: [{"label": "Bandwidth Packing cases matched or beaten", "value": "92.5%"}, {"label": "Pipeline runtime, after optimization", "value": "30.034s → 1.027s (29.2×)"}, {"label": "Frontier envelope reproduced across constraint structures", "value": "18 / 18"}]
+metrics: [{"label": "Bandwidth Packing cases matched or beaten", "value": "92.5% (as published, ESWA 2022)"}, {"label": "Pipeline runtime, after optimization", "value": "30.034s → 1.027s (29.2×)"}, {"label": "Frontier envelope reproduced across constraint structures", "value": "18 / 18"}]
 ---
 
 ## The problem with asking first
@@ -40,6 +40,12 @@ The method was published in *Expert Systems with Applications* in 2022,
 co-authored with **Michel Gendreau**, and evaluated on the Bandwidth Packing
 Problem, where it matched or outperformed the methods in the literature in
 **92.5%** of cases.
+
+> That figure is from the paper. The open-source implementation here solves the
+> portfolio and CVRP cases, not the Bandwidth Packing instances, so you cannot
+> currently reproduce 92.5% from this repository. Porting those instances is
+> open work, and until it lands the number is a citation rather than a claim
+> this code backs.
 
 ## What the frontier actually shows you
 

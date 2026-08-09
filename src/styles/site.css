@@ -254,3 +254,19 @@ footer .fine { margin-top: 22px; font-size: 13px; color: var(--ink-faint); }
   .hero-grid .headshot { grid-row: 1; width: 116px; height: 116px; box-shadow: 0 0 0 4px var(--accent); }
   .hero-grid .hero-text { grid-row: 2; }
 }
+
+/* --------------------------------------------------------- proof strip */
+
+/* Four things a stranger recognises, before they have to trust any prose.
+   Deliberately above the positions line: two unfamiliar company names are a
+   weaker opener than a PhD, a production system and a journal. */
+.proof-strip {
+  list-style: none; display: grid; gap: 1px; margin-top: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(178px, 1fr));
+  background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+}
+.proof-strip li {
+  background: var(--surface); padding: 12px 14px;
+  font-size: 13px; line-height: 1.4; color: var(--ink-soft);
+}
+.proof-strip li::first-line { color: var(--ink); }

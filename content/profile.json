@@ -1,6 +1,6 @@
 {
   "$comment": "Single source of truth. build.mjs derives every representation from this file: HTML pages, markdown twins, llms.txt, llms-full.txt, sitemap.xml, profile.json and the JSON-LD blocks. Edit here, never in the output.",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "canonicalOrigin": "https://butkeraites.com",
   "identity": {
     "name": "Renan Butkeraites",
@@ -267,7 +267,7 @@
       "to": "2018",
       "role": "Research Intern",
       "org": "CIRRELT — Polytechnique Montréal",
-      "desc": "Optimization under uncertainty, supervised by Prof. Michel Gendreau."
+      "desc": "Optimization under uncertainty, in the research group at CIRRELT."
     },
     {
       "from": "2016",

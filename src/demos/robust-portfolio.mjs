@@ -18,7 +18,11 @@
 import { Plot, slider, tableView, fmt } from './lib/chart.mjs'
 import { hardness } from './lib/hardness.mjs'
 
-const API = 'https://sirom-1024241903118.us-central1.run.app'
+// Same-origin. Firebase rewrites /portfolio/** and /status to the Cloud Run
+// service, so the browser sees one origin: no CORS preflight, no second
+// certificate, no cross-origin allowance in the CSP, and the backend URL never
+// appears in the page. One origin is one failure mode instead of two.
+const API = ''
 
 const PHASES = [
   ['scenario_solves', 'Scenario LPs', 'var(--series-1)'],
@@ -53,13 +57,24 @@ function warmUp() {
 /** True while the container is still starting, so the UI can say so. */
 let warmedAt = null
 
-async function optimize(params, signal) {
-  const res = await fetch(`${API}/portfolio/optimize`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(params),
-    signal,
-  })
+async function optimize(params, signal, attempt = 0) {
+  let res
+  try {
+    res = await fetch(`${API}/portfolio/optimize`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(params),
+      signal,
+    })
+  } catch (err) {
+    // A cold container, a dropped connection, a network blip: all arrive as the
+    // same opaque TypeError. Retry once with a short backoff before telling a
+    // visitor the solver is broken, because most of the time it is not.
+    if (err.name === 'AbortError' || attempt > 0) throw err
+    await new Promise(r => setTimeout(r, 1200))
+    if (signal.aborted) throw new DOMException('aborted', 'AbortError')
+    return optimize(params, signal, attempt + 1)
+  }
   if (!res.ok) {
     let detail = `HTTP ${res.status}`
     try {

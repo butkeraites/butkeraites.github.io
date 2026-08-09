@@ -1,13 +1,13 @@
 {
   "$comment": "Single source of truth. build.mjs derives every representation from this file: HTML pages, markdown twins, llms.txt, llms-full.txt, sitemap.xml, profile.json and the JSON-LD blocks. Edit here, never in the output.",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "canonicalOrigin": "https://butkeraites.com",
   "identity": {
     "name": "Renan Butkeraites",
     "legalName": "Renan Brito Cano Butkeraites",
     "pronouns": null,
     "headline": "I put optimization in production. Now I'm making it safe for an agent to drive.",
-    "shortBio": "PhD in Operations Research and eight years building the Python backends the models actually run in — a vehicle-routing engine across 40,000+ locations, from whiteboard to production in 16 months with a team of six, and a robust optimization method published in Expert Systems with Applications with Michel Gendreau.",
+    "shortBio": "PhD in Operations Research and eight years building the Python backends the models actually run in — a vehicle-routing engine across 40,000+ locations, from whiteboard to production in 16 months with a team of six, and a robust optimization method published in Expert Systems with Applications.",
     "role": "Staff Engineer, Optimization & Decision Systems · PhD, Operations Research",
     "currentPositions": [
       {
@@ -35,7 +35,7 @@
     "proof": [
       "PhD, Operations Research (UNIFESP/ITA)",
       "40k-location routing engine, in production",
-      "Published in Expert Systems with Applications, with Michel Gendreau",
+      "Robust optimization published in Expert Systems with Applications",
       "4 solvers running live on this page"
     ]
   },
@@ -112,7 +112,7 @@
     }
   ],
   "about": [
-    "I started as a **mechatronics technician** maintaining flight simulators, and ended up with a **PhD in Operations Research** — because I kept asking how decisions could be made better under uncertainty. Along the way I did research with Michel Gendreau in Montréal, published the SIROM method, and created \"Hardness\", a new way to measure how robust a solution really is.",
+    "I started as a **mechatronics technician** maintaining flight simulators, and ended up with a **PhD in Operations Research** — because I kept asking how decisions could be made better under uncertainty. That took me through a research stay at CIRRELT in Montréal, the SIROM method, and \"Hardness\", a new way to measure how robust a solution really is.",
     "Since then I've applied that lens in insurance, banking, rail logistics, public transit, and data platforms: always the same job, **turning a messy real-world decision into a model, and the model into production software**. I've led teams through that whole arc — hiring, mentoring, pair programming, and shipping.",
     "Today I manage technology for **SG Global Group** in Kennesaw, Georgia — leading legal AI and LLM initiatives for SG LAW LLP — while directing technology at **Fresh Codes**, an AI-driven product studio, with remote teams and global clients. Off the clock: mathematical puzzles, good food, and music — sometimes all three while putting my daughter to sleep."
   ],
@@ -145,7 +145,7 @@
     {
       "org": "PhD Research · UNIFESP + Polytechnique Montréal",
       "title": "SIROM — a robust optimization method under uncertainty",
-      "summary": "Created a sampling-based multi-objective iterative method for optimization under uncertainty, plus \"Hardness\", a new robustness measure. Co-authored with Michel Gendreau.",
+      "summary": "Created a sampling-based multi-objective iterative method for optimization under uncertainty, plus \"Hardness\", a new robustness measure. Published in Expert Systems with Applications.",
       "outcome": "Outperformed or matched literature methods in 92.5% of Bandwidth Packing cases",
       "tags": [
         "Robust Optimization",

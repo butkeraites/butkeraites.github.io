@@ -71,7 +71,7 @@ export function llmsTxt(profile, projects, origin) {
   const out = [
     `# ${identity.name}`,
     '',
-    `> ${identity.shortBio} PhD in Operations Research (UNIFESP/ITA, 2021); published the SIROM robust-optimization method in Expert Systems with Applications (2022) with Michel Gendreau. Based in ${identity.location.locality}, ${identity.location.region}, working remotely worldwide.`,
+    `> ${identity.shortBio} PhD in Operations Research (UNIFESP/ITA, 2021); published the SIROM robust-optimization method in Expert Systems with Applications (2022). Based in ${identity.location.locality}, ${identity.location.region}, working remotely worldwide.`,
     '',
     demos.length
       ? demoRuntimeSentence(demos)

@@ -36,8 +36,8 @@ the probability it stays feasible under uncertainty.
 
 You pick the trade-off afterwards, looking at real numbers.
 
-The method was published in *Expert Systems with Applications* in 2022,
-co-authored with **Michel Gendreau**, and evaluated on the Bandwidth Packing
+The method was published in *Expert Systems with Applications* in 2022 and
+evaluated on the Bandwidth Packing
 Problem, where it matched or outperformed the methods in the literature in
 **92.5%** of cases.
 

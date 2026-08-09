@@ -5,7 +5,7 @@ summary: A sampling-based method that hands you a Pareto frontier of robust solu
 status: demo
 order: 1
 demoModule: /demos/robust-portfolio.mjs
-runsOn: On a container that scales to zero
+runtime: server
 fixture: {"name": "robust-portfolio", "url": "https://sirom-1024241903118.us-central1.run.app/portfolio/optimize", "body": {"target_return": 0.12, "number_of_scenarios": 300, "uncertainty_scale": 1.0}}
 repo: https://github.com/butkeraites/sirom
 license: MIT

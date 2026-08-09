@@ -292,9 +292,9 @@ export function mount(root, fixture) {
           <div class="stat-value">${eta.eta.toFixed(4)}</div></div>
       </div>
       <p class="plot-caption">SIROM produced this portfolio on a server; Hardness scored
-        it here, on your machine, with no round trip. The two methods speak the same
-        problem schema on purpose — one generates robust solutions, the other ranks
-        them.</p>`
+        it here, on your machine, with no round trip. The two speak the same problem schema on purpose — one generates robust
+        solutions, the other ranks them. SIROM is peer-reviewed (EWSA 2022); Hardness
+        comes from the thesis.</p>`
 
     pickBody.append(left, right)
   }

@@ -6,8 +6,9 @@ summary: Fit the most people into a room subject to a minimum-separation rule â€
 status: demo
 order: 5
 demoModule: /demos/separation-layout.mjs
-runsOn: In your browser
+runtime: browser
 repo: https://github.com/butkeraites/otimizador-de-filas
+license: MIT
 techniques: ["Mixed-integer programming", "Maximum independent set", "Branch and bound", "Facility layout"]
 stack: ["JavaScript", "Python", "OR-Tools"]
 metrics: [{"label": "Capacity at 1 m separation", "value": "36 of 36 seats"}, {"label": "Capacity at 1.5 m", "value": "18"}, {"label": "Capacity at 2 m", "value": "9"}, {"label": "Solved to proven optimality in", "value": "under 1 ms"}]

@@ -14,6 +14,51 @@ const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(
  *  both paths are published rather than one path serving two types. */
 const twin = url => (url === '/' ? '/index.md' : url.replace(/\/$/, '') + '.md')
 
+/**
+ * Where a demo actually computes, described once.
+ *
+ * This exists because the site got it wrong. Four machine surfaces — the
+ * markdown twin, the JSON-LD, profile.json and llms.txt — each derived "runs in
+ * your browser" from `status === 'demo'`, while SIROM has always called a
+ * container. The page said one thing and the machine layer said another, which
+ * is the exact failure `scripts/check.mjs` was written to catch and had no
+ * guard for.
+ *
+ * One field in frontmatter now drives every phrasing, so they cannot disagree.
+ */
+export const RUNTIMES = {
+  browser: {
+    label: 'In your browser',
+    markdown: 'runs entirely in your browser — no server, no account',
+    browserRequirements:
+      'Requires JavaScript. Runs entirely client-side; no server or account needed.',
+    runsInBrowser: true,
+  },
+  server: {
+    label: 'On a container that scales to zero',
+    markdown: 'calls a solver running on a container that scales to zero',
+    browserRequirements:
+      'Requires JavaScript. Calls a hosted solver over HTTPS; no account needed.',
+    runsInBrowser: false,
+  },
+}
+
+/** The runtime descriptor for a project, defaulting to browser. */
+export const runtimeOf = project => RUNTIMES[project.runtime] ?? RUNTIMES.browser
+
+/** Describe where the demos run, from what they are rather than from a
+ *  hardcoded assumption that they are all client-side. */
+function demoRuntimeSentence(demos) {
+  const inBrowser = demos.filter(d => runtimeOf(d).runsInBrowser).length
+  const onServer = demos.length - inBrowser
+  const where =
+    onServer === 0 ? 'every one of them in your browser'
+      : inBrowser === 0 ? 'each calling a hosted solver'
+        : `${inBrowser} of them in your browser and ${onServer} against a hosted solver`
+  return `This is a working portfolio: the demos below compute their results live — ${where}.\n`
+    + 'Each demo page states where it runs. Every page also has a markdown twin — append\n`.md` to any path.'
+}
+
 /* ------------------------------------------------------------- llms.txt */
 
 /** Answer.AI llms.txt format: an H1, a blockquote summary, then link
@@ -29,7 +74,7 @@ export function llmsTxt(profile, projects, origin) {
     `> ${identity.shortBio} PhD in Operations Research (UNIFESP/ITA, 2021); published the SIROM robust-optimization method in Expert Systems with Applications (2022) with Michel Gendreau. Based in ${identity.location.locality}, ${identity.location.region}, working remotely worldwide.`,
     '',
     demos.length
-      ? 'This is a working portfolio: the demos listed below execute in your browser, so their\nresults are computed live rather than recorded. Every page also has a markdown twin —\nappend `.md` to any path.'
+      ? demoRuntimeSentence(demos)
       : 'Every page here has a markdown twin — append `.md` to any path — and the whole corpus\nis available in one request at /llms-full.txt.',
     '',
   ]
@@ -145,7 +190,8 @@ export function publicProfile(profile, projects, origin) {
       techniques: p.techniques ?? [],
       stack: p.stack ?? [],
       headlineMetrics: p.metrics ?? [],
-      runsInBrowser: p.status === 'demo',
+      runsInBrowser: p.status === 'demo' ? runtimeOf(p).runsInBrowser : false,
+      runtime: p.status === 'demo' ? (p.runtime ?? 'browser') : null,
     })),
 
     selectedWork: profile.selectedWork.map(w => ({
@@ -288,6 +334,7 @@ export function personLd(profile, origin) {
       },
       email: `mailto:${links.email}`,
       url: origin,
+      image: `${origin}/assets/headshot-640.jpg`,
       identifier: {
         '@type': 'PropertyValue',
         propertyID: 'ORCID',
@@ -348,7 +395,7 @@ export function projectLd(project, profile, origin) {
       name: project.title,
       description: project.summary,
       applicationCategory: 'DeveloperApplication',
-      browserRequirements: 'Requires JavaScript. Runs entirely client-side; no server or account needed.',
+      browserRequirements: runtimeOf(project).browserRequirements,
       operatingSystem: 'Any',
       url: `${origin}${project.url}`,
       author: { '@id': `${origin}/#person` },

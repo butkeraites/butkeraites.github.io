@@ -24,6 +24,16 @@
         ]
       },
       {
+        "//": "nosniff is enabled site-wide, so images must arrive with a correct image/* type or the browser refuses to paint them.",
+        "source": "**/*.@(jpg|jpeg|png|webp|avif|svg)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=604800, must-revalidate"
+          }
+        ]
+      },
+      {
         "//": "Machine-readable surfaces: correct content type, CORS open, and cached briefly so an agent re-reading them gets fresh data.",
         "source": "**/*.@(md|txt)",
         "headers": [

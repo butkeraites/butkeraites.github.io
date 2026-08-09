@@ -24,7 +24,7 @@ import { execSync } from 'node:child_process'
 import { marked } from 'marked'
 
 import { renderHome, renderProject, renderProjectIndex, renderNotFound } from './src/templates.mjs'
-import { llmsTxt, llmsFullTxt, sitemapXml, robotsTxt, publicProfile, cvMarkdown } from './src/machine.mjs'
+import { llmsTxt, llmsFullTxt, sitemapXml, robotsTxt, publicProfile, cvMarkdown, runtimeOf } from './src/machine.mjs'
 
 const ROOT = dirname(new URL(import.meta.url).pathname)
 const OUT = join(ROOT, 'dist')
@@ -257,7 +257,7 @@ function projectMarkdown(profile, p) {
   if (p.license) facts.push(`- **Licence:** ${p.license}`)
   if (p.techniques?.length) facts.push(`- **Techniques:** ${p.techniques.join(', ')}`)
   if (p.stack?.length) facts.push(`- **Stack:** ${p.stack.join(', ')}`)
-  if (p.status === 'demo') facts.push(`- **Interactive demo:** runs entirely in the browser, no server`)
+  if (p.status === 'demo') facts.push(`- **Interactive demo:** ${runtimeOf(p).markdown}`)
   if (facts.length) lines.push(...facts, '')
 
   if (p.metrics?.length) {

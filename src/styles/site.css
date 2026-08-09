@@ -236,3 +236,21 @@ footer .lede { margin-top: 12px; max-width: 62ch; font-size: 17px; }
 footer .links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 24px; font-size: 15px; }
 footer .machine { margin-top: 26px; font-size: 14px; color: var(--ink-faint); max-width: 60ch; }
 footer .fine { margin-top: 22px; font-size: 13px; color: var(--ink-faint); }
+
+/* ---------------------------------------------------------- hero photo */
+
+.hero-grid {
+  display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center;
+}
+.headshot {
+  width: 232px; height: 232px; border-radius: 50%; object-fit: cover;
+  display: block; background: var(--surface-2);
+  box-shadow: 0 0 0 5px var(--accent), 0 14px 40px rgb(0 0 0 / 0.18);
+}
+@media (max-width: 760px) {
+  /* On a phone the face leads and the claim follows, rather than being pushed
+     off the first screen by a 232px circle. */
+  .hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .hero-grid .headshot { grid-row: 1; width: 116px; height: 116px; box-shadow: 0 0 0 4px var(--accent); }
+  .hero-grid .hero-text { grid-row: 2; }
+}

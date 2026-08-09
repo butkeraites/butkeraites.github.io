@@ -6,9 +6,10 @@ summary: A public repository of mine contains 201 committed simulated-annealing 
 status: demo
 order: 4
 demoModule: /demos/failed-anneal.mjs
-runsOn: In your browser
+runtime: browser
 fixture: {"name": "annealing-runs", "file": "content/fixtures/annealing-runs.json"}
 repo: https://github.com/butkeraites/simulated-annealing
+license: MIT
 techniques: ["Metaheuristics", "Simulated annealing", "Dynamic programming", "Knapsack"]
 stack: ["Python", "NumPy"]
 metrics: [{"label": "Committed runs", "value": "201"}, {"label": "Feasible among them", "value": "0"}, {"label": "Compute spent producing them", "value": "8.94 hours"}, {"label": "Uphill moves accepted, as published", "value": "100.0%"}]

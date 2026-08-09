@@ -4,6 +4,7 @@ tagline: How much punishment can this decision take before it breaks?
 summary: A continuous, normalized robustness measure for optimization under interval uncertainty — one number in [0,1] that ranks feasible solutions by how well they resist the uncertainty around them, with an exact closed form and a Monte-Carlo estimator that agree.
 status: demo
 order: 2
+runtime: browser
 demoModule: /demos/price-of-robustness.mjs
 repo: https://github.com/butkeraites/hardness
 license: MIT

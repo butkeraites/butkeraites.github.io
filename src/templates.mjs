@@ -7,7 +7,7 @@
  * the demo shows — the canvas enhances it, it never replaces it.
  */
 
-import { personLd, publicationsLd, projectLd, breadcrumbLd } from './machine.mjs'
+import { personLd, publicationsLd, projectLd, breadcrumbLd, runtimeOf } from './machine.mjs'
 
 const esc = s => String(s ?? '')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -42,7 +42,12 @@ ${mdUrl ? `<link rel="alternate" type="text/markdown" href="${esc(origin + mdUrl
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${esc(canonical)}">
 <meta property="og:site_name" content="${esc(profile.identity.name)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="${esc(origin)}/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(profile.identity.name)} — ${esc(profile.identity.role)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${esc(origin)}/assets/og-card.png">
 <meta name="author" content="${esc(profile.identity.name)}">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f4c5c'/><text x='50' y='69' font-size='54' text-anchor='middle' fill='white' font-family='Georgia'>R</text></svg>">
@@ -104,7 +109,8 @@ export function renderHome({ profile, projects, origin }) {
 
   const body = `
 <header class="hero">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
     <p class="kicker">${esc(identity.role)}</p>
     <h1>${esc(identity.headline)}</h1>
     <p class="lede">${inline(identity.shortBio)}</p>
@@ -117,6 +123,12 @@ export function renderHome({ profile, projects, origin }) {
       <a class="btn${demos.length ? ' ghost' : ' primary'}" href="mailto:${esc(profile.links.email)}">Get in touch</a>
       <a class="btn ghost" href="/cv.md">CV as markdown</a>
     </div>
+    </div>
+    <img class="headshot" src="/assets/headshot-640.jpg"
+         srcset="/assets/headshot-320.jpg 320w, /assets/headshot-640.jpg 640w"
+         sizes="(max-width: 760px) 128px, 232px"
+         width="640" height="640" fetchpriority="high"
+         alt="${esc(identity.name)}">
   </div>
 </header>
 
@@ -124,7 +136,7 @@ ${demos.length ? `
 <section id="demos">
   <div class="wrap">
     <h2>Things you can actually run</h2>
-    <p class="section-sub">Real solvers, real results, computed while you watch. Some run in your browser; the heavier ones run on a container that scales to zero. Either way, nothing here is a recording.</p>
+    <p class="section-sub">Real solvers, computing while you watch — most in your browser, the heaviest on a container that scales to zero. Where a page plots published results, it says so.</p>
     <div class="cards">
       ${demos.map(demoCard).join('\n      ')}
     </div>
@@ -144,7 +156,7 @@ ${demos.length ? `
 <section id="experience">
   <div class="wrap">
     <h2>Experience</h2>
-    <p class="section-sub">Ten years from mechatronics technician to engineering leadership.</p>
+    <p class="section-sub">From maintaining flight simulators to leading engineering teams — the same question the whole way.</p>
     <ol class="timeline">
       ${profile.experience.map(timelineItem).join('\n      ')}
     </ol>
@@ -236,7 +248,7 @@ const pubItem = p => {
 
 export function renderProjectIndex({ profile, projects, origin }) {
   const groups = [
-    ['demo', 'Interactive demos', 'These run in your browser. The solver is part of the page.'],
+    ['demo', 'Interactive demos', 'Every result here is computed when you ask for it. Each page says where it runs.'],
     ['case-study', 'Case studies', 'Work worth reading about, without a live version.'],
     ['tool', 'Tools', 'Things built to be used by other people.'],
   ]
@@ -282,7 +294,7 @@ export function renderProject({ profile, project: p, origin }) {
     p.license && ['Licence', esc(p.license)],
     p.techniques?.length && ['Techniques', p.techniques.map(esc).join(', ')],
     p.stack?.length && ['Stack', p.stack.map(esc).join(', ')],
-    p.status === 'demo' && ['Runs', esc(p.runsOn || 'In your browser')],
+    p.status === 'demo' && ['Runs', esc(runtimeOf(p).label)],
   ].filter(Boolean)
 
   const body = `

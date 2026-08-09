@@ -28,6 +28,47 @@ const fail = m => { console.error(`  FAIL  ${m}`); failures++ }
 const warn = m => { console.warn(`  warn  ${m}`); warnings++ }
 const pass = m => console.log(`  ok    ${m}`)
 
+/* ------------------------------------------------------- runtime honesty */
+
+/**
+ * Every surface must agree about where a demo computes.
+ *
+ * This exists because the site shipped the opposite: the SIROM page said "on a
+ * container that scales to zero" while its markdown twin, its JSON-LD and
+ * profile.json all said client-side. One frontmatter field feeds them now, and
+ * this asserts nothing has started deriving it independently again.
+ */
+async function checkRuntimeClaims(profile) {
+  console.log('\ndemos agree about where they run')
+  const CLIENT_SIDE = /entirely in (your|the) browser|entirely client-side|no server/i
+
+  for (const p of profile.projects) {
+    if (p.status !== 'demo') continue
+    const inBrowser = p.runsInBrowser
+    const md = await readFile(join(DIST, `projects/${p.id}.md`), 'utf8')
+    const html = await readFile(join(DIST, `projects/${p.id}/index.html`), 'utf8')
+
+    const mdSaysClient = CLIENT_SIDE.test(md)
+    const ld = html.match(/"browserRequirements":\s*"([^"]+)"/)
+    const ldSaysClient = ld ? CLIENT_SIDE.test(ld[1]) : null
+
+    const wrong = []
+    if (mdSaysClient !== inBrowser) wrong.push(`markdown twin ${mdSaysClient ? 'claims' : 'denies'} client-side`)
+    if (ldSaysClient !== null && ldSaysClient !== inBrowser) wrong.push(`JSON-LD ${ldSaysClient ? 'claims' : 'denies'} client-side`)
+
+    if (wrong.length) fail(`${p.id}: runtime="${p.runtime}" but ${wrong.join('; ')}`)
+    else pass(`${p.id}: ${p.runtime} — page, markdown and JSON-LD agree`)
+  }
+
+  const llms = await readFile(join(DIST, 'llms.txt'), 'utf8')
+  const anyServer = profile.projects.some(p => p.status === 'demo' && !p.runsInBrowser)
+  if (anyServer && /demos[^.]*execute in your browser/i.test(llms)) {
+    fail('llms.txt tells agents every demo runs in the browser, and one does not')
+  } else {
+    pass('llms.txt describes the demo runtimes correctly')
+  }
+}
+
 /* -------------------------------------------------- licence consistency */
 
 async function checkLicences(profile) {
@@ -51,8 +92,15 @@ async function checkLicences(profile) {
       real = 'NONE'
     }
     const declared = p.license || 'NONE'
-    if (declared === real) pass(`${slug}: ${real}`)
-    else fail(`${slug}: site says ${declared}, GitHub says ${real}`)
+    if (declared !== real) {
+      fail(`${slug}: site says ${declared}, GitHub says ${real}`)
+    } else if (real === 'NONE' || real === 'NOASSERTION') {
+      // "Here, run it" and "all rights reserved" cannot both be true. A linked
+      // repo with no licence is unusable by the people the link invites.
+      fail(`${slug}: linked from the site with no licence — nobody may legally use it`)
+    } else {
+      pass(`${slug}: ${real}`)
+    }
   }
 }
 
@@ -159,6 +207,7 @@ async function checkBudgets() {
 const profile = JSON.parse(await readFile(join(DIST, 'profile.json'), 'utf8'))
 await checkMachineSurfaces()
 await checkBudgets()
+await checkRuntimeClaims(profile)
 await checkLicences(profile)
 await checkRepoVisibility(profile)
 

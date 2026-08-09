@@ -1,19 +1,23 @@
 {
   "$comment": "Single source of truth. build.mjs derives every representation from this file: HTML pages, markdown twins, llms.txt, llms-full.txt, sitemap.xml, profile.json and the JSON-LD blocks. Edit here, never in the output.",
-
-  "version": "1.0.0",
+  "version": "1.1.0",
   "canonicalOrigin": "https://butkeraites.com",
-
   "identity": {
     "name": "Renan Butkeraites",
     "legalName": "Renan Brito Cano Butkeraites",
     "pronouns": null,
     "headline": "I turn optimization research into systems that ship.",
-    "shortBio": "Engineering leader with a PhD in Operations Research and 7+ years building Python backends, AI/LLM products, and decision-support systems — from mathematical model to production.",
+    "shortBio": "Engineering leader with a PhD in Operations Research: a decade in the field, eight years building the Python backends, decision-support systems and AI products that carry the models into production.",
     "role": "Engineering leader · Optimization specialist",
     "currentPositions": [
-      { "title": "Information Technology Manager", "org": "SG Global Group" },
-      { "title": "Director of Technology", "org": "Fresh Codes" }
+      {
+        "title": "Information Technology Manager",
+        "org": "SG Global Group"
+      },
+      {
+        "title": "Director of Technology",
+        "org": "Fresh Codes"
+      }
     ],
     "location": {
       "locality": "Kennesaw",
@@ -21,12 +25,14 @@
       "country": "US",
       "workModel": "Remote, global"
     },
-    "languages": ["English", "Portuguese"],
+    "languages": [
+      "English",
+      "Portuguese"
+    ],
     "identifiers": {
       "orcid": "0000-0002-5830-0466"
     }
   },
-
   "links": {
     "email": "rbritobut@gmail.com",
     "github": "https://github.com/butkeraites",
@@ -35,7 +41,6 @@
     "orcid": "https://orcid.org/0000-0002-5830-0466",
     "x": "https://x.com/renan_but"
   },
-
   "expertise": {
     "$comment": "Feeds schema.org knowsAbout and the llms.txt summary. Ordered by depth, not breadth.",
     "core": [
@@ -52,48 +57,91 @@
       "LLM/AI product engineering",
       "Technical leadership and mentoring"
     ],
-    "solvers": ["Gurobi", "CPLEX", "OR-Tools", "HiGHS", "SCIP"],
-    "languages": ["Python", "SQL", "TypeScript", "Rust", "Go"]
+    "solvers": [
+      "Gurobi",
+      "CPLEX",
+      "OR-Tools"
+    ],
+    "languages": {
+      "primary": [
+        "Python",
+        "SQL"
+      ],
+      "alsoShipped": [
+        "TypeScript",
+        "Rust",
+        "Go"
+      ],
+      "note": "Primary means daily, in production, for years. Also-shipped means real public code (github.com/butkeraites) but not depth I would claim in an interview."
+    }
   },
-
   "quickFacts": [
-    { "label": "Location", "value": "Kennesaw, GA (US)" },
-    { "label": "Work model", "value": "Remote, global" },
-    { "label": "Languages", "value": "English, Portuguese" },
-    { "label": "PhD", "value": "Operations Research, UNIFESP/ITA (2021)" },
-    { "label": "Core", "value": "Python, SQL, cloud, LLMs, integer & robust optimization" },
-    { "label": "Solvers", "value": "Gurobi, CPLEX, OR-Tools, HiGHS" }
+    {
+      "label": "Location",
+      "value": "Kennesaw, GA (US)"
+    },
+    {
+      "label": "Work model",
+      "value": "Remote, global"
+    },
+    {
+      "label": "Languages",
+      "value": "English, Portuguese"
+    },
+    {
+      "label": "PhD",
+      "value": "Operations Research, UNIFESP/ITA (2021)"
+    },
+    {
+      "label": "Core",
+      "value": "Python, SQL, AWS/GCP, LLMs, integer & robust optimization"
+    },
+    {
+      "label": "Solvers",
+      "value": "Gurobi, CPLEX, OR-Tools"
+    }
   ],
-
   "about": [
     "I started as a **mechatronics technician** maintaining flight simulators, and ended up with a **PhD in Operations Research** — because I kept asking how decisions could be made better under uncertainty. Along the way I did research with Michel Gendreau in Montréal, published the SIROM method, and created \"Hardness\", a new way to measure how robust a solution really is.",
     "Since then I've applied that lens in insurance, banking, rail logistics, public transit, and data platforms: always the same job, **turning a messy real-world decision into a model, and the model into production software**. I've led teams through that whole arc — hiring, mentoring, pair programming, and shipping.",
     "Today I manage technology for **SG Global Group** in Kennesaw, Georgia — leading legal AI and LLM initiatives for SG LAW LLP — while directing technology at **Fresh Codes**, an AI-driven product studio, with remote teams and global clients. Off the clock: mathematical puzzles, good food, and music — sometimes all three while putting my daughter to sleep."
   ],
-
   "closing": "I solve chronic problems — the ones that keep coming back no matter what you throw at them. If you're facing one, reach out: I can help you see it in a different light. And who knows — that's exactly how the best collaborations begin.",
-
   "selectedWork": [
     {
       "org": "Nitryx → Progress Rail · A Caterpillar Company",
       "title": "Vehicle routing engine for Brazil's largest sugar producer",
       "summary": "Designed and led a Python optimization engine for fleet routing across 40k+ locations — started at Nitryx, carried through Progress Rail's acquisition, and taken from concept to production-ready in 16 months with a team of 6.",
       "outcome": "−20% fleet size · $60K/month cloud savings via in-house Distance Matrix APIs",
-      "tags": ["Python", "OR / Routing", "Team of 6", "Google Maps API"]
+      "tags": [
+        "Python",
+        "OR / Routing",
+        "Team of 6",
+        "Google Maps API"
+      ]
     },
     {
       "org": "Optibus · Public Transit SaaS",
       "title": "Client-facing exports platform for transit operators on 3 continents",
       "summary": "Led a 5-developer team owning report generation and integrations for clients across North America, Latin America, and Western Europe — including real-time transportation map feeds.",
       "outcome": "−50% new bugs · 2× team development velocity · key contract secured",
-      "tags": ["Python", "AWS", "MongoDB", "Team Lead"]
+      "tags": [
+        "Python",
+        "AWS",
+        "MongoDB",
+        "Team Lead"
+      ]
     },
     {
       "org": "PhD Research · UNIFESP + Polytechnique Montréal",
       "title": "SIROM — a robust optimization method under uncertainty",
       "summary": "Created a sampling-based multi-objective iterative method for optimization under uncertainty, plus \"Hardness\", a new robustness measure. Co-authored with Michel Gendreau.",
       "outcome": "Outperformed or matched literature methods in 92.5% of Bandwidth Packing cases",
-      "tags": ["Robust Optimization", "Monte Carlo", "Published research"],
+      "tags": [
+        "Robust Optimization",
+        "Monte Carlo",
+        "Published research"
+      ],
       "demo": "robust-portfolio"
     },
     {
@@ -101,104 +149,132 @@
       "title": "Behavioral models that moved acquisition and engagement",
       "summary": "Built a Markov-chain model of app user behavior to retarget communication, and executive-level analyses that pivoted credit policy and marketing. Led fraud-pattern analysis on PIX instant payments.",
       "outcome": "+15% app activation · +45% high-quality credit card leads",
-      "tags": ["Python", "Markov Chains", "MMM", "Fraud Analytics"]
+      "tags": [
+        "Python",
+        "Markov Chains",
+        "MMM",
+        "Fraud Analytics"
+      ]
     },
     {
       "org": "Porto Seguro · Insurance",
       "title": "From 5-day to 5-minute model deployments",
       "summary": "Started the company's movement toward API-based models and AWS cloud computing, and shipped a freight-size estimation heuristic used in logistics planning.",
       "outcome": "Deployment time: 5 days → 5 minutes · 20% logistics optimization",
-      "tags": ["AWS", "Flask APIs", "Heuristics", "ML"]
+      "tags": [
+        "AWS",
+        "Flask APIs",
+        "Heuristics",
+        "ML"
+      ]
     },
     {
       "org": "Public Health · COVID-19",
       "title": "Forecast UTI — ICU bed forecasting during the pandemic",
       "summary": "Co-built an application forecasting intensive-care bed demand for Brazilian health services during COVID-19, published in a national epidemiology journal. Also open-sourced a classroom-occupancy optimizer for safe school distancing.",
       "outcome": "Published in Epidemiologia e Serviços de Saúde (2020)",
-      "tags": ["Forecasting", "Social Impact", "Open Source"],
+      "tags": [
+        "Forecasting",
+        "Social Impact",
+        "Open Source"
+      ],
       "demo": "separation-layout"
     }
   ],
-
   "experience": [
     {
-      "from": "2026", "to": null,
+      "from": "2026",
+      "to": null,
       "role": "Information Technology Manager",
       "org": "SG Global Group",
       "desc": "Leading IT operations and technology strategy for SG LAW LLP (Kennesaw, GA): LLM-powered legal solutions for research, contract review, and document analysis; governance of confidential legal datasets (anonymization, redaction, privacy compliance); cybersecurity across AI systems; firm-wide AI adoption and training."
     },
     {
-      "from": "2025", "to": null,
+      "from": "2025",
+      "to": null,
       "role": "Director of Technology",
       "org": "Fresh Codes",
       "desc": "End-to-end backend engineering for AI-driven product development: distributed cloud architectures (AWS, Azure), high-throughput data pipelines, LLM-powered ML models. Mentoring a fully remote team of 4+ engineers."
     },
     {
-      "from": "2025", "to": "2026",
+      "from": "2025",
+      "to": "2026",
       "role": "Technical Lead",
       "org": "Serendipe Institute of Science & Technology",
       "desc": "Drove the institute's technical strategy and R&D execution; project prospecting, technical hiring, and mentoring of engineers and researchers."
     },
     {
-      "from": "2024", "to": "2026",
+      "from": "2024",
+      "to": "2026",
       "role": "Founder & CEO",
       "org": "BSI — AI & Optimization Consulting (closed)",
       "desc": "Founded and led a consulting firm in Campinas, Brazil, crafting bespoke AI strategies and optimization solutions for clients; operations closed in January 2026."
     },
     {
-      "from": "2024", "to": "2025",
+      "from": "2024",
+      "to": "2025",
       "role": "Integration Consultant, Backend Python",
       "org": "hotglue",
       "desc": "Designed and implemented custom data-integration solutions on hotglue's embedded ETL platform."
     },
     {
-      "from": "2022", "to": "2024",
+      "from": "2022",
+      "to": "2024",
       "role": "Backend Python Team Lead",
       "org": "Optibus",
       "desc": "Led the customer-oriented R&D team for specialized exports; pair-programming culture, knowledge-sharing initiatives (\"Optifridays\"), technical interviewing during rapid company growth."
     },
     {
-      "from": "2021", "to": "2022",
+      "from": "2021",
+      "to": "2022",
       "role": "Researcher, Optimization",
       "org": "Nitryx Consulting → Progress Rail (Caterpillar)",
       "desc": "Started the vehicle-routing optimization engine at Nitryx and carried it into Progress Rail after the acquisition — leading a team of 6 from conception to production-ready in 16 months, with Distance Matrix APIs and six real-time integrations."
     },
     {
-      "from": "2020", "to": "2021",
+      "from": "2020",
+      "to": "2021",
       "role": "Data Science Specialist",
       "org": "Banco Safra",
       "desc": "Mixed Media Models, Markov-chain behavior models, PIX fraud-pattern detection, executive-level analytics."
     },
     {
-      "from": "2019", "to": "2020",
+      "from": "2019",
+      "to": "2020",
       "role": "Senior Data Scientist",
       "org": "Porto Seguro",
       "desc": "API-based model serving on AWS; optimization heuristics for logistics; ML with XGBoost, scikit-learn, Gurobi/CPLEX."
     },
     {
-      "from": "2018", "to": "2019",
+      "from": "2018",
+      "to": "2019",
       "role": "Mathematical Analyst",
       "org": "UniSoma",
       "desc": "Column-generation scheduling with CPLEX for railroad workforce planning; real-time Big Data (Kafka, PySpark) NLP fraud detection."
     },
     {
-      "from": "2018", "to": "2018",
+      "from": "2018",
+      "to": "2018",
       "role": "Research Intern",
       "org": "CIRRELT — Polytechnique Montréal",
       "desc": "Optimization under uncertainty, supervised by Prof. Michel Gendreau."
     },
     {
-      "from": "2016", "to": "2021",
+      "from": "2016",
+      "to": "2021",
       "role": "PhD Candidate, Operations Research",
       "org": "UNIFESP / ITA (CNPq fellow)",
       "desc": "Thesis: \"Optimization under uncertainty: a new computational method, a new robustness measure, and applications.\""
     }
   ],
-
   "publications": [
     {
       "title": "A sampling-based multi-objective iterative robust optimization method for the Bandwidth Packing Problem",
-      "authors": ["Renan Brito Cano Butkeraites", "Luiz Leduino de Salles Neto", "Michel Gendreau"],
+      "authors": [
+        "Renan Brito Cano Butkeraites",
+        "Luiz Leduino de Salles Neto",
+        "Michel Gendreau"
+      ],
       "venue": "Expert Systems with Applications",
       "volume": "203",
       "pages": "117337",
@@ -209,21 +285,33 @@
     },
     {
       "title": "Forecast UTI: an application for forecasting intensive care unit beds during the COVID-19 pandemic",
-      "authors": ["Luiz Leduino de Salles Neto", "Renan Brito Cano Butkeraites", "Martins", "Chaves", "Horacio Hideki Yanasse"],
+      "authors": [
+        "Luiz Leduino de Salles Neto",
+        "Renan Brito Cano Butkeraites",
+        "Martins",
+        "Chaves",
+        "Horacio Hideki Yanasse"
+      ],
       "venue": "Epidemiologia e Serviços de Saúde",
       "year": 2020,
       "type": "ScholarlyArticle"
     },
     {
       "title": "Efficient frontier of credit risk using Monte Carlo simulation",
-      "authors": ["Renan Brito Cano Butkeraites", "José Luiz Chela", "Luiz Leduino de Salles Neto"],
+      "authors": [
+        "Renan Brito Cano Butkeraites",
+        "José Luiz Chela",
+        "Luiz Leduino de Salles Neto"
+      ],
       "venue": "International Journal of Business Intelligence and Systems Engineering",
       "year": 2019,
       "type": "ScholarlyArticle"
     },
     {
       "title": "Optimization under uncertainty: a new computational method, a new robustness measure, and applications",
-      "authors": ["Renan Brito Cano Butkeraites"],
+      "authors": [
+        "Renan Brito Cano Butkeraites"
+      ],
       "venue": "UNIFESP",
       "year": 2021,
       "url": "https://repositorio.unifesp.br/handle/11600/63626",
